@@ -1,0 +1,28 @@
+{
+  "name": "homeward",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m0nq/homeward.git"
+  },
+  "author": "Jasmine, Annabelle, Ryder, Monk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m0nq/homeward/issues"
+  },
+  "homepage": "https://github.com/m0nq/homeward#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.6",
+    "morgan": "^1.7.0"
+  }
+}
