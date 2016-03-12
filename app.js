@@ -20,6 +20,6 @@ var port = process.env.PORT || 3000;
 // REGISTRATION
 // ROUTES / CONTROLLERS
 // LISTEN
-app.listen(3000, function () {
-  console.log("listening on the quiet storm... port:*3000");
+app.listen(port, function () {
+  console.log("listening on the quiet storm... *port:", port);
 });
