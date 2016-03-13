@@ -15,3 +15,7 @@ var dogSchema = new Schema({
   description: String,
   lost: Boolean
 });
+
+var Dog = mongoose.model("Dog", dogSchema);
+
+module.exports.dogSchema = Dog;
