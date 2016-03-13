@@ -32,13 +32,13 @@ var port = process.env.PORT || 3000;
 
 // REGISTRATION
 // ROUTES / CONTROLLERS
-// var routes = require('./config/routes');
-require("./config/passport")(passport)
+var routes = require('./config/routes');
+require("./config/passport")(passport);
 
-// app.use(routes);
+app.use(routes);
 
 app.get('/', function(req, res){
-  res.render('partials/header', {user: req.user});
+  res.render('layout', {user: req.user});
 });
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email'} ));
@@ -52,7 +52,7 @@ app.get('/auth/facebook/callback',
 
 app.get("/logout", function(req, res){
   req.logout();
-  res.redirect("/")
+  res.redirect("/");
 });
 
 // LISTEN
