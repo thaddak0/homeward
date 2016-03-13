@@ -1,6 +1,15 @@
 var Dog = require('../models/dog');
 
-var dogController = {
+var dogsController = {
+  index: function (req, res) {
+    dog.find({}, function (err, dogs) {
+      if (err) {
+        console.log("Error: ", err.message);
+      } else {
+        res.status(200).send(JSON.stringify(dogs.reverse()));
+      }
+    });
+  },
   createDog: function (req, res) {
     var name = req.body.name;
     var breed = req.body.breed;
