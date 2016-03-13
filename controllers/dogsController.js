@@ -1,6 +1,6 @@
 var Dog = require('../models/dog');
 
-var dogController = {
+var dogsController = {
   createDog: function (req, res) {
     var name = req.body.name;
     var breed = req.body.breed;

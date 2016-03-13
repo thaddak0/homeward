@@ -52,7 +52,7 @@ app.get('/auth/facebook/callback',
 
 app.get("/logout", function(req, res){
   req.logout();
-  res.redirect("/")
+  res.redirect("/");
 });
 
 // LISTEN
