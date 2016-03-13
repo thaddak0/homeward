@@ -32,11 +32,7 @@ var port = process.env.PORT || 3000;
 
 // REGISTRATION
 // ROUTES / CONTROLLERS
-
-// var routes = require('./config/routes');
-
 var routes = require('./config/routes');
-
 require("./config/passport")(passport);
 
 app.use(routes);
