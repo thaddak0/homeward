@@ -1,0 +1,18 @@
+<!doctype html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+<h1>Homeward</h1>
+{{#if user }}
+      <pre>
+        <li>{{user.fb.firstName}}</li>
+      </pre>
+        <li><a href="/logout">Logout</a></li>
+{{else}}
+      <a href="/auth/facebook">Login with Facebook</a>
+{{/if}}
+
+</body>
+</html>
