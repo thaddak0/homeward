@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
+hbs.registerPartials(__dirname + '/views/partials');
 app.use(express.static(__dirname + '/public'));
 var port = process.env.PORT || 3000;
 
@@ -37,7 +38,7 @@ require("./config/passport")(passport)
 // app.use(routes);
 
 app.get('/', function(req, res){
-  res.render('layout', {user: req.user});
+  res.render('partials/header', {user: req.user});
 });
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email'} ));
