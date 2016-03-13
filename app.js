@@ -32,10 +32,10 @@ var port = process.env.PORT || 3000;
 
 // REGISTRATION
 // ROUTES / CONTROLLERS
-// var routes = require('./config/routes');
-require("./config/passport")(passport)
+var routes = require('./config/routes');
+require("./config/passport")(passport);
 
-// app.use(routes);
+app.use(routes);
 
 app.get('/', function(req, res){
   res.render('partials/header', {user: req.user});
