@@ -1,13 +1,20 @@
 <!doctype html>
   <head>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <!-- custom scripts -->
+    <script src="/js/app.js"></script>
   </head>
   <body>
     <div id="dog">
 
     </div>
     <h1>Homeward</h1>
+
+
     {{#if user }}
     <pre>
       <li>{{user.fb.firstName}}</li>
@@ -16,12 +23,7 @@
     {{else}}
     <a href="/auth/facebook">Login with Facebook</a>
     {{/if}}
-    <form id="new-dog-form" class="form" onsubmit="homeward.createDog(event)">
-      <input type="text" name="name" placeholder="name">
-      <input type="submit" Save></input>
-    </form>
-    <script type="text/javascript">
-      dog.renderDogs({{{dogs}}});
-    </script>
+
+
   </body>
 </html>

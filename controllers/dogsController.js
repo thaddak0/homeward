@@ -2,7 +2,7 @@ var Dog = require('../models/dog');
 
 var dogsController = {
   index: function (req, res) {
-    dog.find({}, function (err, dogs) {
+    Dog.find({}, function (err, dogs) {
       if (err) {
         console.log("Error: ", err.message);
       } else {

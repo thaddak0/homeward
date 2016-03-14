@@ -6,6 +6,7 @@ var express = require('express'),
 var dogsController = require('../controllers/dogsController');
 //
 router.route('/dashboard')
-  .get(dogsController.index);
+  .get(dogsController.index)
+  .post(dogsController.createDog);
 
 module.exports = router;
