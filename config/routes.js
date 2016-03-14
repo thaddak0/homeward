@@ -8,5 +8,6 @@ var dogsController = require('../controllers/dogsController');
 router.route('/dashboard')
   .get(dogsController.index)
   .post(dogsController.createDog);
-
+router.route('/dashboard/:id')
+  .get(dogsController.show);
 module.exports = router;
