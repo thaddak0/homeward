@@ -16,7 +16,13 @@ mongoose.connect('mongodb://localhost/homeward');
 process.on('exit', function () {
   mongoose.diconnect();
 });
-app.use( cookieParser() );
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+hbs.registerPartials(__dirname + '/views/partials');
+app.use(express.static(__dirname + '/public'));
+
+// APPLICAITION REGISTRATION
+app.use(cookieParser() );
 app.use(expressSession({secret: 'mySecretKey'}));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -24,13 +30,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-hbs.registerPartials(__dirname + '/views/partials');
-app.use(express.static(__dirname + '/public'));
 var port = process.env.PORT || 3000;
 
-// REGISTRATION
 // ROUTES / CONTROLLERS
 var routes = require('./config/routes');
 require("./config/passport")(passport);

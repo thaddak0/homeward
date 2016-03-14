@@ -4,7 +4,7 @@ var dogsController = {
   index: function (req, res) {
     Dog.find({}, function (err, dogs) {
       if (err) {
-        console.log("Error: ", err.message);
+        console.log("Error: ", err);
       } else {
         res.status(200).send(JSON.stringify(dogs.reverse()));
       }

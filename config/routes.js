@@ -4,7 +4,7 @@ var express = require('express'),
     methodOverride = require('method-override');
 
 var dogsController = require('../controllers/dogsController');
-//
+
 router.route('/dashboard')
   .get(dogsController.index);
 

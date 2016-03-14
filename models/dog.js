@@ -13,9 +13,11 @@ var dogSchema = new Schema({
   reward: String,
   phoneNumber: String,
   description: String,
-  lost: Boolean
+  lost: Boolean,
+  createdOn: { type: Date, default: Date.now },
+  isActive: { type: Boolean, default: true }
 });
 
 var Dog = mongoose.model("Dog", dogSchema);
 
-module.exports.dogSchema = Dog;
+module.exports = Dog;
