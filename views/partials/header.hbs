@@ -4,9 +4,9 @@
           <h1><a href="/dashboard">homeward</a></h1>
           {{#if user }}
           <pre>
-          <li>{{user.fb.firstName}}</li>
+          {{user.fb.firstName}}
           </pre>
-          <li><a href="/logout">Logout</a></li>
+          <a href="/logout">Logout</a>
           {{else}}
           <h1>homeward</h1>
           <a href="/auth/facebook">Login with Facebook</a> {{/if}}

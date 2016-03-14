@@ -1,6 +1,6 @@
 console.log('linked');
-  //
-  // var homeward = {};
+
+  var homeward = {};
   //
   // homeward.getDogs = function(callback) {
   //
@@ -13,12 +13,13 @@ console.log('linked');
   //   });
   // };
   //
-  // homeward.createDog = function(e) {
-  //   e.preventDefault();
-  //   console.log(e);
-  //   // var dog = $(e.target).serialize();
-  //   // console.log(dog);
-  // };
+  homeward.createDog = function(e) {
+    e.preventDefault();
+    console.log(e);
+    var dog = $(e.target).serialize();
+    console.log(dog);
+    $.post("/dashboard", dog);
+  };
 
   //
   // if(document.getElementById('addDog').)
@@ -29,11 +30,3 @@ console.log('linked');
   // document.getElementById('addDog').addEventListener("click", function () {
   //   console.log("clicked");
   // });
-
-$('#addDog').on("click", function(){
-  console.log("HIGRIEUIUHERIUHER");
-});
-
-$( "#target" ).click(function() {
-  alert( "Handler for .click() called." );
-});
