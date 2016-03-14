@@ -10,6 +10,7 @@ var dogsController = {
       }
     });
   },
+
   createDog: function (req, res) {
     var name = req.body.name;
     var breed = req.body.breed;
