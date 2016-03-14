@@ -39,14 +39,14 @@ require("./config/passport")(passport);
 app.use(routes);
 
 app.get('/', function(req, res){
-  res.render('layout', {user: req.user});
+  res.render('home', {user: req.user});
 });
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email'} ));
 
 app.get('/auth/facebook/callback',
   passport.authenticate('facebook', {
-    successRedirect: '/',
+    successRedirect: '/dashboard',
     failureRedirect: '/'
   })
 );

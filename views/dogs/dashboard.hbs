@@ -1,12 +1,16 @@
+
 <div class="row col">
     <div class="col-sm-6 col-md-9 col-centered" id="dashboard">
+
+<div class="row dashboard">
+    <div class="col-sm-6 col-md-9 col-centered" id="dashboard-template">
+
         {{#each dogs}}
-        <a href="/dashboard/{{_id}}" class="thumbnail">
             <div class="dog-thumb">
-                <img src="{{image}}" />
+                <img src={{image}}>
             </div>
             <div class="caption dog-thumb">
-                <h4 class="dog-name" id="dog-name">{{name}}</h4>
+                  <a href="/dashboard/{{_id}}" class="thumbnail"><h4 class="dog-name" id="dog-name">{{name}}</h4>  </a>
                 <h5><span class = "attributes">breed:</span> {{breed}}</h5>
                 <h5><span class = "attributes">color:</span> {{color}}</h5>
                 <h5><span class = "attributes">size:</span> {{size}}</h5>
@@ -16,8 +20,6 @@
                 <h5><span class = "attributes">description:</span> {{description}}</h5>
                 <h5><span class = "attributes">lost:</span> {{lost}}</h5>
             </div>
-        </a>
         {{/each}}
     </div>
 </div>
-

@@ -1,15 +1,15 @@
 <nav class="navbar col-md-12"> {{!-- "navbar-fixed-top" --}}
     <div class="container-fluid">
-        
+
+
         <h1 class="hero">homeward</h1> {{#if user }}
         <div class="navbar-info">
             <div class="user-name">
-               {{user.fb.firstName}}
+                {{user.fb.firstName}}
             </div>
-                <a href="/logout">Logout</a> {{else}}
+            <a href="/logout">Logout</a> {{else}}
             <p class="logout"><a href="/auth/facebook">Login with Facebook</a></p> {{/if}}
 
         </div>
     </div>
-
 </nav>
