@@ -1,5 +1,5 @@
 
-<h1>SHOW PAGE FOR {{user.fb.firstName}}</h1>
+<h1>SHOW PAGE FOR {{userShow.fb.firstName}}</h1>
 
 
 
@@ -8,19 +8,15 @@
 <div class="row dashboard">
     <div class="col-sm-6 col-md-9 col-centered" id="dashboard-template">
        
-            <div class="dog-thumb">
-                <img src={{dog.image}}>
+            <div class="userShow.fb-thumb">
+                <img src={{userShow.fb.image}}>
             </div>
-            <div class="caption dog-thumb">
-                <h4 class="dog-name" id="dog-name">{{dog.name}}</h4>
-                <h5><span class = "attributes">breed:</span> {{dog.breed}}</h5>
-                <h5><span class = "attributes">color:</span> {{dog.color}}</h5>
-                <h5><span class = "attributes">size:</span> {{dog.size}}</h5>
-                <h5><span class = "attributes">location:</span> {{dog.location}}</h5>
-                <h5><span class = "attributes">reward:</span> {{dog.reward}}</h5>
-                <h5><span class = "attributes">phoneNumber:</span> {{dog.phoneNumber}}</h5>
-                <h5><span class = "attributes">description:</span> {{dog.description}}</h5>
-                <h5><span class = "attributes">lost:</span> {{dog.lost}}</h5>
+            <div class="caption userShow.fb-thumb">
+                
+                <h5><span class = "attributes">First Name:</span> {{userShow.fb.firstName}}</h4>
+                <h5><span class = "attributes">Last Name:</span> {{userShow.fb.lastName}}</h5>
+                <h5><span class = "attributes">Email:</span> {{userShow.fb.email}}</h5>
+                
             </div>
     </div>
 </div>

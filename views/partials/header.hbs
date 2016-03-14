@@ -4,7 +4,7 @@
           <h1><a href="/dashboard">homeward</a></h1>
           {{#if user }}
           <pre>
-          <li>{{user.fb.firstName}}</li>
+          <li><a href="/users/{{user.fb.id}}">{{user.fb.firstName}}</a></li>
           </pre>
           <li><a href="/logout">Logout</a></li>
           {{else}}

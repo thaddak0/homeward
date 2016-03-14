@@ -1,18 +1,11 @@
 var User = require('../models/user');
+var Dog = require('../models/dog');
 
 
+
+
+// is this needed for user
 var usersController = {
-  index: function (req, res) {
-    User.find({}, function (err, dogs) {
-      if (err) {
-        console.log("Error: ", err);
-      } else {
-        res.render('users/show', {users: users, user: req.user});
-      }
-    });
-  },
-
-
 
   createUser: function (req, res) {
     var id = req.body.id;
@@ -27,7 +20,16 @@ var usersController = {
       accessToken: accessToken,
       firstName: firstName,
       lastName: lastName,
-      email: email
+      email: email,
+
+      // how should these be put in from models
+
+      lostDogs: [{
+
+      }],
+       foundDogs: [{
+
+       }]
       
     },
     function (err, dog) {
@@ -37,7 +39,27 @@ var usersController = {
         res.status(201).send(JSON.stringify(dog));
       }
     });
-  }
+  },
+
+
+    show: function (req, res) {
+    var id = req.params.id;
+    User.findById({_id: id}, function(err, user){
+
+        if (err){
+          console.log("There was an error : " + err);
+        }
+        else{
+
+          res.render('users/show', {userShow: user});
+
+
+
+        }
+    });
+
+}
+
 };
 
 module.exports = usersController;
