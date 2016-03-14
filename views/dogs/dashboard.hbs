@@ -1,3 +1,8 @@
+<div class="add-dog-button">
+<button class="btn btn-primary" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
+  Post Pup
+</button>
+</div>
 
 <div class="row dashboard">
     <div class="col-sm-6 col-md-9 col-centered" id="dashboard-template">
@@ -18,4 +23,64 @@
             </div>
         {{/each}}
     </div>
+</div>
+
+
+<div class="modal fade" id="new-dog-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1>add a dog to homeward</h1>
+      </div>
+
+  <div class="modal-body">
+    <div class="container-fluid">
+
+        <form method="POST" action="/dashboard">
+
+            <div class="form-group col-md-4">
+            <input name="lost"  class="form-control" placeholder="True or False" required='true'/>
+          </div>
+            <div class="form-group col-md-4">
+            <input name="name" class="form-control" placeholder="Dog Name" required='true'/>
+          </div>
+          <div class="form-group col-md-4">
+            <input name="breed"  class="form-control" placeholder="Dog Breed" required='true' />
+          </div>
+          <div class="form-group col-md-4">
+            <input name="color"  class="form-control" placeholder="Color" required='true'/>
+          </div>
+          <div class="form-group col-md-4">
+            <input name="age"  class="form-control" placeholder="Age" required='true'/>
+          </div>
+          <div class="form-group col-md-4">
+            <input name="size"  class="form-control" placeholder="Small, medium, or large" required='true'/>
+          </div>
+           <div class="form-group col-md-4">
+            <input name="location"  class="form-control" placeholder="Location" required='true'/>
+          </div>
+            <div class="form-group col-md-4">
+            <input name="image"  class="form-control" placeholder="Image_url" required='true'/>
+          </div>
+          <div class="form-group col-md-4">
+            <input name="reward"  class="form-control" placeholder="Reward" required='true'/>
+          </div>
+           <div class="form-group col-md-4">
+            <input name="phoneNumber"  class="form-control" placeholder="Phone number" required='true'/>
+          </div>
+            <div class="form-group col-md-4">
+            <input name="decription"  class="form-control" placeholder="Description" required='true'/>
+          </div>
+
+
+            <div class="form-group col-md-4">
+            <input class="btn btn-primary col-md-12" type="submit" value="Add Dog" required='true' />
+          </div>
+
+        </form>
+      </div>
+  </div>
+  </div>
+  </div>
 </div>

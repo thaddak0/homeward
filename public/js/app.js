@@ -1,3 +1,4 @@
+console.log('linked');
   //
   // var homeward = {};
   //
@@ -18,3 +19,21 @@
   //   // var dog = $(e.target).serialize();
   //   // console.log(dog);
   // };
+
+  //
+  // if(document.getElementById('addDog').)
+  // {
+  //    alert("button was clicked");
+  // }
+
+  // document.getElementById('addDog').addEventListener("click", function () {
+  //   console.log("clicked");
+  // });
+
+$('#addDog').on("click", function(){
+  console.log("HIGRIEUIUHERIUHER");
+});
+
+$( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
