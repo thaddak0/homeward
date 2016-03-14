@@ -1,12 +1,13 @@
 var Dog = require('../models/dog');
 
+
 var dogsController = {
   index: function (req, res) {
     Dog.find({}, function (err, dogs) {
       if (err) {
         console.log("Error: ", err);
       } else {
-        res.render('dogs/dashboard', {dogs: dogs});
+        res.render('dogs/dashboard', {dogs: dogs, user: req.user});
       }
     });
   },
