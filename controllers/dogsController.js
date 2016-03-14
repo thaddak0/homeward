@@ -44,7 +44,43 @@ var dogsController = {
         res.status(201).send(JSON.stringify(dog));
       }
     });
+  },
+
+
+  show: function (req, res) {
+    var id = req.params.id;
+    Dog.findById({_id: id}, function(err, dog){
+
+        if (err){
+          console.log("There was an error : " + err);
+        }
+        else{
+
+          res.render('dogs/show', {dog: dog, user: req.user});
+        }
+    });
+
+
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
 
 module.exports = dogsController;
