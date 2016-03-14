@@ -1,7 +1,8 @@
 <nav class="navbar navbar-default"> {{!-- "navbar-fixed-top" --}}
     <div class="container-fluid">
-      <div class="navbar-header">
-          <h1>homeward</h1> {{#if user }}
+      <div class="navbar-header"
+          <h1><a href="/dashboard">homeward</a></h1>
+          {{#if user }}
           <pre>
           <li>{{user.fb.firstName}}</li>
           </pre>
