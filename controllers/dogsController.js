@@ -6,7 +6,7 @@ var dogsController = {
       if (err) {
         console.log("Error: ", err);
       } else {
-        res.render('dogs/dashboard', {dogs: dogs, user: req.user});
+        res.render('dogs/dashboard', {dogs: dogs.reverse(), user: req.user});
       }
     });
   },
@@ -41,7 +41,7 @@ var dogsController = {
       if (err) {
         res.status(500).send();
       } else {
-
+          // res.status(201).send(JSON.stringify(dog));
         if (lost) {
           user.lostDogs.push(dog._id);
           res.status(201).send(JSON.stringify(dog));
