@@ -49,6 +49,7 @@ var dogsController = {
             } else {
                 // res.status(201).send(JSON.stringify(dog));
                 user.dogs.push(dog._id);
+                user.save();
                 console.log(user.dogs);
                 res.status(201).send(JSON.stringify(dog));
               }

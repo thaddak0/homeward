@@ -35,16 +35,20 @@ var usersController = {
   },
 
     show: function (req, res) {
-    var id = req.params.id;
-    var userID= id.toString();
-    console.log(userID);
-    console.log("the id", id);
-    User.find({id: id}, function(err, user){
-
+      var id = req.params.id;
+      User.findById({_id: id}, function(err, user){
         if (err){
           console.log("There was an error : " + err);
-        }
-        else{
+        } else {
+          var pup = [];
+          console.log(user.dogs);
+          for (var i = 0; i < user.dogs.length; i ++) {
+             Dog.findById({_id: user.dogs[i]}, function(err, puppy){
+              pup.push(puppy);
+            });
+
+           };
+           console.log(pup);
           res.render('users/show', {userShow: user, user: req.user});
 
         }
