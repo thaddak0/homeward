@@ -18,5 +18,22 @@ console.log('linked');
     console.log(e);
     var dog = $(e.target).serialize();
     console.log(dog);
-    $.post("/dashboard", dog);
+    $.post("/dashboard", dog)
+      .done(function(res){
+        homeward.renderDog(res);
+        console.log(res);
+      })
+      .fail(function(err){
+        console.log("Error: ", err);
+      })
   };
+
+
+homeward.renderDog = function(dog){
+  var $doglist = $('#doglist');
+  var dogTemplate = Handlebars.compile($('#dog-template').html());
+  console.log("dogtemplate", dogTemplate);
+  var dog = JSON.parse(dog);
+  console.log(dog);
+  var compiledHTML = dogTemplate({dog: dog})
+}
