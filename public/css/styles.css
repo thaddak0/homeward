@@ -1,124 +1,143 @@
-        * {
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 400;
-            font-size: 1.3em;
-        }
-        
-        .navbar {
-            background: url("/images/puppy.png") no-repeat right;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 300;
-            padding-left: 1em;
-            color: #FFF9EA;
-        }
-        
-        .navbar-info {
-            text-align: right;
-            padding-right: 1em;
-            padding-top: 0em;
-        }
-        
-        .hero:hover {
-            text-decoration: none;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 300;
-            text-shadow: 0 0 .07em #FFF9EA;
-            backface-visibility: visible;
-            color: #FFF9EA;
-            backface-visibility: hidden;
-        }
-        
-        .homeButton {
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 300;
-            color: #FFF9EA;
-            text-decoration: none;
-            pointer-events: none;
-            cursor: default;
-        }
-        
-        .logout {
-            text-align: right;
-            padding-right: 0;
-        }
-        
-        .user-name {
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 400;
-            font-size: 2em;
-        }
-        
-        .hero {
-            font-weight: 300;
-            font-size: 7em;
-            padding: .1em;
-        }
-        
-        .heron {
-            font-weight: 300;
-            font-size: 7em;
-            padding: .1em;
-        }
-        
-        .dog-name {
-            font-weight: 300;
-            font-size: .8em;
-            padding-left: 0em;
-            margin-left: 0em;
-        }
-        
-        .col-centered {
-            float: 0;
-        }
-        
-        .data {
-            max-width: 400px;
-            position: right;
-            margin-left: 365px;
-            text-align: left;
-            display: inline-block;
-        }
-        
-        img {
-            min-width: 333.333px;
-            max-width: 334px;
-            overflow-y: hidden;
-            overflow-x: hidden;
-            display: inline-block;
-            position: absolute;
-            top: center;
-            border: 2px solid #aaaaaa;
-            margin: .3em;
-        }
-        
-        .bold {
-            font-weight: 600;
-            font-size: 1.15em;
-        }
-        
-        .index {
-            max-height: 333.33px;
-        }
-        
-        .row {
-            height: 333.33px;
-            width: 90%;
-            border: 2px solid #aaaaaa;
-            overflow-y: hidden;
-            padding: .1em;
-            margin: .7em;
-            position: relative;
-        }
-        
-        .radio {
-            font-size: 15px;
-        }
-        
-        .addDog {
-            margin-left: 2.4em;
-            padding: 1em;
-        }
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.navbar {
+    background: url("/images/puppy.png") no-repeat right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    padding-left: 1em;
+    color: #FFF9EA;
+}
+
+#hero:hover {
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    text-shadow: 0 0 .07em #FFF9EA;
+    backface-visibility: visible;
+    color: #FFF9EA;
+    backface-visibility: hidden;
+}
+
+.homeButton {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    color: #FFF9EA;
+    text-decoration: none;
+    cursor: default;
+}
+.navbar-info {
+    color:  #FFF9EA;
+    text-align: right;
+    padding-right: 1em;
+    padding-top: 0em;
+}
+.logout {
+    text-align: right;
+    margin: .3em;
+    margin-bottom: .4em;
+    padding: 1em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.user-name {
+    font-family: 'Quicksand', sans-serif;
+    color: #FFF9EA;
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 1.23em;
+    text-align: left;
+    padding-left: 1em;
+    padding-top: 1em;
+    margin-top: -1em;
+    margin-bottom: -1.6em;
+}
+
+#hero {
+    color: #FFF9EA;
+    font-weight: 300;
+    font-size: 7em;
+    padding: .1em;
+}
+
+.heron {
+    color: #FFF9EA;
+    font-weight: 300;
+    font-size: 7em;
+    padding: .1em;
+}
+
+.dog-name {
+    font-weight: 300;
+    font-size: .8em;
+    padding-left: 0em;
+    margin-left: 0em;
+}
+
+.col-centered {
+    float: 0;
+}
+
+.data {
+    max-width: 400px;
+    position: right;
+    margin-left: 365px;
+    text-align: left;
+    display: inline-block;
+}
+
+img {
+    min-width: 333.333px;
+    max-width: 334px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    position: absolute;
+    top: center;
+    border: 2px solid #aaaaaa;
+    margin: .3em;
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 1.15em;
+}
+
+.index {
+    max-height: 333.33px;
+}
+
+.row {
+    height: 333.33px;
+    width: 90%;
+    border: 2px solid #aaaaaa;
+    overflow-y: hidden;
+    padding: .1em;
+    margin: .7em;
+    position: relative;
+}
+
+.radio {
+    font-size: 15px;
+}
+
+.addDog {
+    margin-left: 2.3em;
+    padding: 1em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+a {
+    pointer-events: inherit;
+    color: inherit;
+    
+}
