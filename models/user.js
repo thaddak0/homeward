@@ -11,8 +11,7 @@ var User = mongoose.model('User', {
   firstName: String,
   lastName: String,
   email: String,
-  lostDogs: [],
-  foundDogs: []
+  dogs: []
 });
 
 
