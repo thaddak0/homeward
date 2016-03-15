@@ -21,11 +21,12 @@ console.log('linked');
     $.post("/dashboard", dog)
       .done(function(res){
         homeward.renderDog(res);
+        $(".modal").modal('hide');
         console.log(res);
       })
       .fail(function(err){
         console.log("Error: ", err);
-      })
+      });
   };
 
 
@@ -39,4 +40,4 @@ homeward.renderDog = function(dog){
   console.log("compiledHTML", compiledHTML);
   $doglist.prepend(compiledHTML);
   console.log("dog", dog);
-}
+};

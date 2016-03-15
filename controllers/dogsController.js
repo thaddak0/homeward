@@ -24,7 +24,6 @@ var dogsController = {
     var description = req.body.description;
     var lost = req.body.lost;
     var user = req.user;
-    console.log(user);
     Dog.create({
       name: name,
       breed: breed,
@@ -43,10 +42,11 @@ var dogsController = {
         res.status(500).send();
       } else {
           // res.status(201).send(JSON.stringify(dog));
-          user.dogs.push(dog._id);
+          console.log(req);
+          // user.dogs.push(dog._id);
           res.status(201).send(JSON.stringify(dog));
         }
-      })
+      });
     },
 
 
