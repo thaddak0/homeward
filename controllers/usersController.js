@@ -13,8 +13,8 @@ var usersController = {
     var firstName = req.body.firstName;
     var lastName = req.body.lastName;
     var email = req.body.email;
-   
-    
+
+
     User.create({
       id: id,
       accessToken: accessToken,
@@ -30,7 +30,7 @@ var usersController = {
        foundDogs: [{
 
        }]
-      
+
     },
     function (err, dog) {
       if (err) {
