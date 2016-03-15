@@ -20,13 +20,3 @@ console.log('linked');
     console.log(dog);
     $.post("/dashboard", dog);
   };
-
-  //
-  // if(document.getElementById('addDog').)
-  // {
-  //    alert("button was clicked");
-  // }
-
-  // document.getElementById('addDog').addEventListener("click", function () {
-  //   console.log("clicked");
-  // });

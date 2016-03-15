@@ -11,7 +11,7 @@ router.route('/dashboard')
   .post(dogsController.createDog);
 router.route('/dashboard/:id')
   .get(dogsController.show);
-router.route('users/:id')
+router.route('/users/:id')
   .get(usersController.show);
 
 module.exports = router;
