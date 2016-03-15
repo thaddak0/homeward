@@ -2,19 +2,31 @@
     <div class="container-fluid">
 
         {{#if user }}
-        <h1 id="hero"><a class="homeButton"href="/dashboard" >homeward</a></h1>
+        <h1 id="hero"><a class="homeButton"href="/dashboard">homeward</a></h1>
         <div class="navbar-info">
             <div class="user-name">
                 <a href="/users/{{user.id}}">{{user.fb.firstName}}</a>
             </div>
-            <a href="/logout" ><button class="btn btn-primary" class="logout">
-                logout
-            </button></a>
+            <p class="logout">
+                <a href="/logout">
+                    <button class="btn btn-primary" class="logout">
+                        logout
+                    </button>
+                </a>
+            </p>
             {{else}}
             <h1 class="heron">homeward</h1>
-            <p class="logout"><a href="/auth/facebook">Login with Facebook</a></p> {{/if}}
-
+            <p class="logout">
+                <a href="/auth/facebook">
+                    <button class="btn btn-primary" class="logout">
+                        login
+                    </button>
+                </a>
+            </p>
         </div>
+        {{/if}}
+
+
 
 
     </div>
