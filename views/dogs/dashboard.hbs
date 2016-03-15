@@ -1,25 +1,26 @@
+<div class="col-sm-10 col-lg-12 col-xl-18 col-center">
 
-<div class="row col">
-    <div class="col-sm-6 col-md-9 col-centered" id="dashboard">
+    {{#each dogs}}
+    <div class="row">
+        <container class="index">
 
-<div class="row dashboard">
-    <div class="col-sm-6 col-md-9 col-centered" id="dashboard-template">
+            <img src={{image}}>
 
-        {{#each dogs}}
-            <div class="dog-thumb">
-                <img src={{image}}>
+
+            <div class="data" class="index">
+                <a href="/dashboard/{{_id}}" class="attributes">
+                    <h4 class="dog-name" id="dog-name">{{name}}</h4> </a>
+                <h5><span class = "bold">breed:</span> {{breed}}</h5>
+                <h5><span class = "bold">color:</span> {{color}}</h5>
+                <h5><span class = "bold">size:</span> {{size}}</h5>
+                <h5><span class = "bold">location:</span> {{location}}</h5>
+                <h5><span class = "bold">reward:</span> {{reward}}</h5>
+                <h5><span class = "bold">phoneNumber:</span> {{phoneNumber}}</h5>
+                <h5><span class = "bold">description:</span> {{description}}</h5>
+                <h5><span class = "bold">lost:</span> {{lost}}</h5>
             </div>
-            <div class="caption dog-thumb">
-                  <a href="/dashboard/{{_id}}" class="thumbnail"><h4 class="dog-name" id="dog-name">{{name}}</h4>  </a>
-                <h5><span class = "attributes">breed:</span> {{breed}}</h5>
-                <h5><span class = "attributes">color:</span> {{color}}</h5>
-                <h5><span class = "attributes">size:</span> {{size}}</h5>
-                <h5><span class = "attributes">location:</span> {{location}}</h5>
-                <h5><span class = "attributes">reward:</span> {{reward}}</h5>
-                <h5><span class = "attributes">phoneNumber:</span> {{phoneNumber}}</h5>
-                <h5><span class = "attributes">description:</span> {{description}}</h5>
-                <h5><span class = "attributes">lost:</span> {{lost}}</h5>
-            </div>
-        {{/each}}
+
+        </container>
     </div>
+    {{/each}}
 </div>
