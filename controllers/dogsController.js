@@ -24,31 +24,39 @@ var dogsController = {
     var phoneNumber = req.body.phoneNumber;
     var description = req.body.description;
     var lost = req.body.lost;
-    var user = req.user;
-    Dog.create({
-      name: name,
-      breed: breed,
-      color: color,
-      age: age,
-      size: size,
-      location: location,
-      image: image,
-      reward: reward,
-      phoneNumber: phoneNumber,
-      description: description,
-      lost: lost
-    },
-    function (err, dog) {
+    var userid = req.body.userid;
+    User.findById({_id: userid}, function(err, user) {;
       if (err) {
-        res.status(500).send();
-      } else {
-          // res.status(201).send(JSON.stringify(dog));
-          console.log(req);
-          // user.dogs.push(dog._id);
-          res.status(201).send(JSON.stringify(dog));
-        }
+        console.log(err);
       }
-    );
+      else {
+          Dog.create({
+            name: name,
+            breed: breed,
+            color: color,
+            age: age,
+            size: size,
+            location: location,
+            image: image,
+            reward: reward,
+            phoneNumber: phoneNumber,
+            description: description,
+            lost: lost
+          },
+          function (err, dog) {
+            if (err) {
+              res.status(500).send();
+            } else {
+                // res.status(201).send(JSON.stringify(dog));
+                user.dogs.push(dog._id);
+                user.save();
+                console.log(user.dogs);
+                res.status(201).send(JSON.stringify(dog));
+              }
+            })
+          }
+          })
+
 },
 
   show: function (req, res) {
