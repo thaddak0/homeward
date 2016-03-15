@@ -8,6 +8,9 @@ var User = mongoose.model('User', {
     lastName: String,
     email: String
   },
+  firstName: String,
+  lastName: String,
+  email: String,
   lostDogs: [],
   foundDogs: []
 });
