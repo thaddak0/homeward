@@ -1,5 +1,6 @@
-  //
-  // var homeward = {};
+console.log('linked');
+
+  var homeward = {};
   //
   // homeward.getDogs = function(callback) {
   //
@@ -12,9 +13,10 @@
   //   });
   // };
   //
-  // homeward.createDog = function(e) {
-  //   e.preventDefault();
-  //   console.log(e);
-  //   // var dog = $(e.target).serialize();
-  //   // console.log(dog);
-  // };
+  homeward.createDog = function(e) {
+    e.preventDefault();
+    console.log(e);
+    var dog = $(e.target).serialize();
+    console.log(dog);
+    $.post("/dashboard", dog);
+  };

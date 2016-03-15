@@ -1,6 +1,5 @@
 var Dog = require('../models/dog');
 
-
 var dogsController = {
   index: function (req, res) {
     Dog.find({}, function (err, dogs) {
@@ -24,6 +23,7 @@ var dogsController = {
     var phoneNumber = req.body.phoneNumber;
     var description = req.body.description;
     var lost = req.body.lost;
+    var user = req.user;
     Dog.create({
       name: name,
       breed: breed,
@@ -41,46 +41,30 @@ var dogsController = {
       if (err) {
         res.status(500).send();
       } else {
-        res.status(201).send(JSON.stringify(dog));
+
+        if (lost) {
+          user.lostDogs.push(dog._id);
+          res.status(201).send(JSON.stringify(dog));
+        } else {
+          user.foundDogs.push(dog._id);
+          res.status(201).send(JSON.stringify(dog));
+        }
       }
     });
   },
-
 
   show: function (req, res) {
     var id = req.params.id;
     Dog.findById({_id: id}, function(err, dog){
 
-        if (err){
-          console.log("There was an error : " + err);
-        }
-        else{
-
-          res.render('dogs/show', {dog: dog, user: req.user});
-        }
+      if (err){
+        console.log("There was an error : " + err);
+      }
+      else{
+        res.render('dogs/show', {dog: dog, user: req.user});
+      }
     });
-
-
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 };
 
 module.exports = dogsController;

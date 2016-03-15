@@ -9,7 +9,6 @@ module.exports = function(passport){
 
   passport.deserializeUser(function(id, done) {
     User.findById(id, function(err, user) {
-      console.log('deserializing user:',user);
       done(err, user);
     });
   });
@@ -23,7 +22,13 @@ module.exports = function(passport){
   }, function(access_token, refresh_token, profile, done) {
 
     // // Use this to see the information returned from Facebook
-    // console.log(profile)
+    // console.log(profile);
+    var useremail = profile.emails[0].value;
+    var user = User.find({email: useremail}) || User.create({
+        firstName: profile.name.givenName,
+        lastName: profile.name.familyName,
+        email: profile.emails[0].value
+      });
 
     process.nextTick(function() {
 
@@ -47,7 +52,6 @@ module.exports = function(passport){
             return done(null, newUser);
           });
         }
-
       });
     });
   }));
