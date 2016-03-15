@@ -6,7 +6,7 @@ var dogsController = {
       if (err) {
         console.log("Error: ", err);
       } else {
-        res.render('dogs/dashboard', {dogs: dogs, user: req.user});
+        res.render('dogs/dashboard', {dogs: dogs.reverse(), user: req.user});
       }
     });
   },

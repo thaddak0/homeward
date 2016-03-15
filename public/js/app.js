@@ -35,5 +35,8 @@ homeward.renderDog = function(dog){
   console.log("dogtemplate", dogTemplate);
   var dog = JSON.parse(dog);
   console.log(dog);
-  var compiledHTML = dogTemplate({dog: dog})
+  var compiledHTML = dogTemplate({dog: dog});
+  console.log("compiledHTML", compiledHTML);
+  $doglist.prepend(compiledHTML);
+  console.log("dog", dog);
 }
