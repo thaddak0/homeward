@@ -3,9 +3,9 @@
             font-weight: 400;
             font-size: 1.3em;
         }
-        
-        
-        
+
+
+
         .navbar {
             background: url("/images/puppy.png") no-repeat right;
             -webkit-background-size: cover;
@@ -17,41 +17,41 @@
             padding-left: 1em;
             color: #FFF9EA;
         }
-        
+
         .navbar-info {
             text-align: right;
             padding-right: 1em;
             padding-top: 0em;
         }
-        
+
         .logout {
             text-align: right;
             padding-right: 0;
         }
-        
+
         .user-name {
             font-family: 'Quicksand', sans-serif;
             font-weight: 400;
             font-size: 2em;
         }
-        
+
         .hero {
             font-weight: 300;
             font-size: 7em;
             padding: .1em;
         }
-        
+
         .dog-name {
             font-weight: 300;
             font-size: .8em;
             padding-left: 0em;
             margin-left: 0em;
         }
-        
+
         .col-centered {
             float: 0;
         }
-        
+
         .data {
             max-width: 333.333px;
             position: right;
@@ -59,7 +59,7 @@
             text-align: left;
             display: inline-block;
         }
-        
+
         img {
             min-width: 333.333px;
             max-width: 334px;
@@ -71,16 +71,16 @@
             border: 2px solid #aaaaaa;
             margin: .3em;
         }
-        
+
         .bold {
             font-weight: 600;
             font-size: 1.15em;
         }
-        
+
         .index {
             max-height: 333.33px;
         }
-        
+
         .row {
             height: 333.33px;
             width: 90%;
@@ -89,4 +89,8 @@
             padding: .1em;
             margin: .7em;
             position: relative;
+        }
+
+        .radio {
+          font-size: 15px;
         }
