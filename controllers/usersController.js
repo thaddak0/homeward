@@ -1,9 +1,6 @@
 var User = require('../models/user');
 var Dog = require('../models/dog');
 
-
-
-
 // is this needed for user
 var usersController = {
 
@@ -23,14 +20,13 @@ var usersController = {
       email: email,
 
       // how should these be put in from models
-
+      // this will be referenced
       lostDogs: [{
 
       }],
        foundDogs: [{
 
        }]
-
     },
     function (err, dog) {
       if (err) {
@@ -40,7 +36,6 @@ var usersController = {
       }
     });
   },
-
 
     show: function (req, res) {
     var id = req.params.id;

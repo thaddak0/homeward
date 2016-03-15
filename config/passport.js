@@ -1,7 +1,6 @@
 var User = require('../models/user');
 var FacebookStrategy = require('passport-facebook').Strategy;
 var OAUTH = require('../secrets');
-var mongoose = require('mongoose');
 
 module.exports = function(passport){
   passport.serializeUser(function(user, done) {
@@ -53,7 +52,6 @@ module.exports = function(passport){
             return done(null, newUser);
           });
         }
-
       });
     });
   }));

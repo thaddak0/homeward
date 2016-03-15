@@ -14,7 +14,4 @@ router.route('/dashboard/:id')
 router.route('users/:id')
   .get(usersController.show);
 
-
-
-  
 module.exports = router;
