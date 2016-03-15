@@ -72,24 +72,6 @@ var dogsController = {
 
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 };
 
 module.exports = dogsController;
