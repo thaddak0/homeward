@@ -18,9 +18,6 @@ var usersController = {
       firstName: firstName,
       lastName: lastName,
       email: email,
-
-      // how should these be put in from models
-      // this will be referenced
       lostDogs: [{
 
       }],
@@ -28,27 +25,27 @@ var usersController = {
 
        }]
     },
-    function (err, dog) {
+    function (err, user) {
       if (err) {
         res.status(500).send();
       } else {
-        res.status(201).send(JSON.stringify(dog));
+        res.status(201).send(JSON.stringify(user));
       }
     });
   },
 
     show: function (req, res) {
     var id = req.params.id;
-    User.findById({_id: id}, function(err, user){
+    var userID= id.toString();
+    console.log(userID);
+    console.log("the id", id);
+    User.find({id: id}, function(err, user){
 
         if (err){
           console.log("There was an error : " + err);
         }
         else{
-
-          res.render('users/show', {userShow: user});
-
-
+          res.render('users/show', {userShow: user, user: req.user});
 
         }
     });
