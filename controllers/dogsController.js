@@ -24,6 +24,7 @@ var dogsController = {
     var phoneNumber = req.body.phoneNumber;
     var description = req.body.description;
     var lost = req.body.lost;
+    var user = req.user;
     Dog.create({
       name: name,
       breed: breed,
@@ -41,7 +42,15 @@ var dogsController = {
       if (err) {
         res.status(500).send();
       } else {
-        res.status(201).send(JSON.stringify(dog));
+
+          if (lost) {
+            user.lostDogs.push(dog._id);
+            res.status(201).send(JSON.stringify(dog));
+          } else {
+            user.foundDogs.push(dog._id);
+            res.status(201).send(JSON.stringify(dog));
+          }
+
       }
     });
   },
