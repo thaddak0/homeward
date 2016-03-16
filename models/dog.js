@@ -3,18 +3,19 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var dogSchema = new Schema({
-  name: String,
-  breed: String,
-  color: String,
+  name: { type: String, default: "unknown" },
+  breed: { type: String, default: "unknown" },
+  color: { type: String, required: true },
   age: { type: Number, max: 50 },
   size: { type: String, enum: ["small", "medium", "large"] },
-  location: { type: String, enum: neighborhoods },
-  image: String,
+  location: String,
+  neighborhoods: { type: String, enum: neighborhoods },
+  image: { type: String, default: "" },
   reward: String,
-  phoneNumber: String,
-  description: String,
-  lost: Boolean,
-  // status: { type: String, enum: ["lost", "found", "sighted"] },
+  contact: { type: String, required: true },
+  description: { type: String, required: true },
+  status: { type: String, enum: ["lost", "found", "sighted"] },
+  userId: [],
   createdOn: { type: Date, default: Date.now },
   isActive: { type: Boolean, default: true }
 });

@@ -16,4 +16,4 @@ repl.on("exit", function () {
     // exit the repl
     process.exit();
   });
-})
+});

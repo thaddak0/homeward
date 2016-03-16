@@ -25,11 +25,10 @@ var dogsController = {
     var description = req.body.description;
     var lost = req.body.lost;
     var userid = req.body.userid;
-    User.findById({_id: userid}, function(err, user) {;
+    User.findById({_id: userid}, function(err, user) {
       if (err) {
         console.log(err);
-      }
-      else {
+      } else {
           Dog.create({
             name: name,
             breed: breed,
@@ -47,17 +46,17 @@ var dogsController = {
             if (err) {
               res.status(500).send();
             } else {
-                // res.status(201).send(JSON.stringify(dog));
-                user.dogs.push(dog._id);
-                user.save();
-                console.log(user.dogs);
-                res.status(201).send(JSON.stringify(dog));
-              }
-            })
+              // res.status(201).send(JSON.stringify(dog));
+              user.dogs.push(dog._id);
+              user.save();
+              console.log(user.dogs);
+              res.status(201).send(JSON.stringify(dog));
+            }
           }
-          })
-
-},
+        );
+      }
+    });
+  },
 
   show: function (req, res) {
     var id = req.params.id;
@@ -75,7 +74,6 @@ var dogsController = {
 
 
   update: function(req, res){
-
 
     console.log('updating id ', req.params.id);
     console.log('received body ', req.body);

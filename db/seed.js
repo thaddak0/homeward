@@ -42,7 +42,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   },
-
   {
     name: "Bailey",
     breed: "Labrador Retriever",
@@ -56,7 +55,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   },
-
   {
     name: "Max",
     breed: "German Shepherd",
@@ -70,8 +68,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   },
-
-
   {
     name: "Charlie",
     breed: "Golden Retriever",
@@ -85,7 +81,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   },
-
   {
     name: "Bella",
     breed: "Yorkshire Terrier",
@@ -99,8 +94,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   },
-
-
   {
     name: "Lucy",
     breed: "Beagle",
@@ -114,7 +107,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   },
-
   {
     name: "Buddy",
     breed: "Pug",
@@ -128,7 +120,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   },
-
   {
     name: "Molly",
     breed: "Chihuahua",
@@ -142,7 +133,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   },
-
   {
     name: "Daisy",
     breed: "dauschund wiener",
@@ -156,8 +146,6 @@ var dogs = [
     description: "Was found in front of my house wimpering for their owner.",
     lost: true
   }
-
-
 ];
 
 Dog.create(dogs, function(err, docs) {
