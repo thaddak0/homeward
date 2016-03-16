@@ -2,7 +2,11 @@
 <h1>SHOW PAGE FOR {{dog.name}}</h1>
 
 
-
+<div class="add-dog-button">
+    <button class="btn btn-primary" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
+      Edit Pup
+    </button>
+    </div>
 
 
 <div class="row dashboard">
@@ -22,7 +26,137 @@
                 <h5><span class = "attributes">description:</span> {{dog.description}}</h5>
                 <h5><span class = "attributes">lost:</span> {{dog.lost}}</h5>
             </div>
+
     </div>
 </div>
+ 
+ {{!-- EDIT MODAL --}}
+
+<div class="modal fade" id="new-dog-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1>Edit Dog</h1>
+
+          </div>
+
+  <div class="modal-body">
+
+   <!--    Start Form -->
+     <section class="container dogModal">
+  
+      <div class="col-md-6 col-md-offset-1">
+
+        <form method="post" action="/dashboard/{{dog.id}}?_method=PUT" class="form-horizontal text-center move">
+
+            
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="name"></label>
+              <div class="col-md-6">
+              <input id="dogName" name="name" type="text" placeholder="name" value="{{dog.name}}" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="breed"></label>
+              <div class="col-md-6">
+              <input id="dogBreed" name="breed" type="text" placeholder="breed" value="{{dog.breed}}" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="color"></label>
+              <div class="col-md-6">
+              <input id="dogColor" name="color" type="text" placeholder="color" value="{{dog.color}}" class="form-control input-md">
+
+              </div>
+            </div>
+
+
+                 <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="age"></label>
+              <div class="col-md-6">
+                <input class="form-control" id="dogAge" name="age" placeholder="age" value="{{dog.age}}"></input>
+              </div>
+            </div>
+
+              <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="size"></label>
+              <div class="col-md-6">
+                <input class="form-control" id="dogSize" name="size" placeholder="size" value="{{dog.size}}"></input>
+              </div>
+            </div>
+
+              <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="location"></label>
+              <div class="col-md-6">
+                <input class="form-control" id="dogLocation" name="location" placeholder="location" value="{{dog.location}}"></input>
+              </div>
+            </div>
+
+              <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="image"></label>
+              <div class="col-md-6">
+              <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="reward"></label>
+              <div class="col-md-6">
+              <input id="dogReward" name="reward" type="text" placeholder="reward" value="{{dog.reward}}" class="form-control input-md">
+
+              </div>
+            </div>
+
+              <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="phoneNumber"></label>
+              <div class="col-md-6">
+              <input id="dogPhoneNum" name="phoneNumber" type="text" placeholder="Phone Number" value="{{dog.phoneNumber}}" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="description"></label>
+              <div class="col-md-6">
+                <textarea class="form-control" id="dogDescript" name="description" placeholder="description" value="{{dog.description}}"></textarea>
+              </div>
+            </div>
+
+
+
+            <!-- Button -->
+              <label class="col-md-6 control-label" for="singlebutton"></label>
+              <div class="col-md-4">
+                <button id="updating" type="submit" class="btn btn-primary" name="singlebutton">Submit</button>
+              </div>
+        </form>
+          </div>
+         
+        </section>
+      
+         </div>
+        </div>
+       </div>
+      </div>
+</div>
+
+
 
 

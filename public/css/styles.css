@@ -91,6 +91,68 @@
             position: relative;
         }
 
+
+
+
+/*Edit*/
+
+#updating {
+
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*.dogModal {
+    width: 468px;
+}
+
+
+.modal-content {
+    position: relative;
+}*/
+
+.move{
+    float: left;  
+}
+
+
+.form-horizontal .form-group {
+    margin-right: 49%;
+    margin-left: -75%;
+}
+
+.form-control {
+
+    width: 260%;
+}
+
+
+
+/*breaks @ 995*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         .radio {
           font-size: 15px;
         }
