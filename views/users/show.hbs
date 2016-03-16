@@ -20,8 +20,17 @@
             </div>
 
             <div>
-                {{#each user.dogs}}
-              
+                {{#each dog}}
+                <div class="userShow-dog-image">
+                    <img src={{dog.image}}>
+                </div>
+                <div class="caption userShow.fb-thumb">
+
+                    <h5><span class = "attributes">Name:</span> {{name}}</h4>
+                    <h5><span class = "attributes">Description:</span> {{description}}</h5>
+                    <h5><span class = "attributes">Location:</span> {{location}}</h5>
+
+                </div>
                 {{/each}}
             </div>
     </div>
