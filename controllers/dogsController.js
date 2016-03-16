@@ -66,7 +66,6 @@ var dogsController = {
   show: function (req, res) {
     var id = req.params.id;
     Dog.findById({_id: id}, function(err, dog){
-
       if (err){
         console.log("There was an error : " + err);
       } else {

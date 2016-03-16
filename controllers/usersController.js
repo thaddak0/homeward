@@ -37,13 +37,13 @@ var usersController = {
   show: function (req, res) {
     var id = req.params.id;
     User.findById({_id: id}, function(err, user){
-      if (err){
+      if (err) {
         console.log("There was an error : " + err);
       } else {
         var userDogs = [];
         // pups.push(Dog.findById(user.dogs[0]));
         user.dogs.forEach(function (query) {
-          Dog.findById({_id: query}, function(err, dog){
+          Dog.findById({_id: query}, function(err, dog) {
             console.log(dog);
             userDogs.push(dog);
             // with console.log here, it shows the value of userDogs when the surrounding function as a callback.
