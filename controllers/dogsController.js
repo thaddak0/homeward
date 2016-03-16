@@ -68,8 +68,21 @@ var dogsController = {
       if (err){
         console.log("There was an error : " + err);
       }
-      else{
-        res.render('dogs/show', {dog: dog, user: req.user});
+      else {
+        var dogUser;
+
+          User.findById({_id: dog.userId}, function(err, user){
+            if (err) {
+              console.error("Error: " + err);
+            } else {
+              dogUser = user
+              // with console.log here, it shows the value of userDogs when the surrounding function as a callback.
+              console.log("THIS INFO IS BEING SAVED AS DOGUSER:", dogUser);
+            }
+          });
+
+        // with console.log here, it'll be executed before the callback is called #FunctionalProgramming o(^_-)O
+        res.render('dogs/show', {dog: dog, user: req.user, dogUser: dogUser});
       }
     });
   },
