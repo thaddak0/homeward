@@ -50,7 +50,7 @@ var usersController = {
               console.log(dogs);
             });
           });
-          // with console.log here, it'll be executed before the callback is called
+          // with console.log here, it'll be executed before the callback is called #FunctionalProgramming o(^_-)O
           // console.log(dogs);
           res.render('users/show', {userShow: user, user: req.user, dog: dogs});
 
