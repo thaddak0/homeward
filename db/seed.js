@@ -23,11 +23,11 @@ var dogs = [
     age: 4,
     size: ["small"],
     location: "Noe Valley",
-    image: "https://s-media-cache-ak0.pinimg.com/736x/e0/fb/7c/e0fb7cef22da6f28365c183a8df4ea25.jpg",
-    reward: "$400",
-    phoneNumber: "0123456789",
-    description: "Found her rummaging through the trashcans by Whole Foods. Apparently has a taste for free-range chicken.",
-    lost: true
+    // image: "https://s-media-cache-ak0.pinimg.com/736x/e0/fb/7c/e0fb7cef22da6f28365c183a8df4ea25.jpg",
+    // reward: "$400",
+    // phoneNumber: "0123456789",
+    // description: "Found her rummaging through the trashcans by Whole Foods. Apparently has a taste for free-range chicken.",
+    // lost: true
   },
   {
     name: "Diamond",
@@ -36,11 +36,11 @@ var dogs = [
     age: 4,
     size: ["medium"],
     location: "Forest Knolls",
-    image: "http://d21vu35cjx7sd4.cloudfront.net/dims3/MMAH/thumbnail/645x380/quality/90/?url=http%3A%2F%2Fs3.amazonaws.com%2Fassets.prod.vetstreet.com%2F5b%2F52%2F49deed4f440ea965d0ff16fca655%2Fgreat-dane-AP-PFYPXJ-645sm12913.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // image: "http://d21vu35cjx7sd4.cloudfront.net/dims3/MMAH/thumbnail/645x380/quality/90/?url=http%3A%2F%2Fs3.amazonaws.com%2Fassets.prod.vetstreet.com%2F5b%2F52%2F49deed4f440ea965d0ff16fca655%2Fgreat-dane-AP-PFYPXJ-645sm12913.jpg",
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   },
   {
     name: "Bailey",
@@ -49,11 +49,11 @@ var dogs = [
     age: 4,
     size: ["small"],
     location: "Mission",
-    image: "http://animalsbreeds.com/wp-content/uploads/2015/03/Labrador-Retriever-12.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // image: "http://animalsbreeds.com/wp-content/uploads/2015/03/Labrador-Retriever-12.jpg",
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   },
   {
     name: "Max",
@@ -63,10 +63,10 @@ var dogs = [
     size: ["small"],
     location: "Persidio",
     image: "http://www.dogbreedslist.info/uploads/allimg/dog-pictures/German-Shepherd-Dog-3.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   },
   {
     name: "Charlie",
@@ -75,11 +75,11 @@ var dogs = [
     age: 4,
     size: ["medium"],
     location: "Russian Hill",
-    image: "http://2puppies.com/wp-content/uploads/2015/08/golden-retriever-puppies-for-sale.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // image: "http://2puppies.com/wp-content/uploads/2015/08/golden-retriever-puppies-for-sale.jpg",
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   },
   {
     name: "Bella",
@@ -88,11 +88,11 @@ var dogs = [
     age: 4,
     size: ["small"],
     location: "Nob Hill",
-    image: "https://s-media-cache-ak0.pinimg.com/236x/33/d9/72/33d9726dd8fe972c4311a185d28bd3c2.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // image: "https://s-media-cache-ak0.pinimg.com/236x/33/d9/72/33d9726dd8fe972c4311a185d28bd3c2.jpg",
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   },
   {
     name: "Lucy",
@@ -101,11 +101,11 @@ var dogs = [
     age: 4,
     size: ["small"],
     location: "Portola",
-    image: "http://petstrollerblog.com/wp-content/uploads/2014/01/beagle-puppies-photos.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // image: "http://petstrollerblog.com/wp-content/uploads/2014/01/beagle-puppies-photos.jpg",
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   },
   {
     name: "Buddy",
@@ -114,11 +114,11 @@ var dogs = [
     age: 4,
     size: ["medium"],
     location: "Marina",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Sad-pug.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // image: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Sad-pug.jpg",
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   },
   {
     name: "Molly",
@@ -127,11 +127,11 @@ var dogs = [
     age: 4,
     size: ["small"],
     location: "Noe Valley",
-    image: "http://www.woofipedia.com/images/uploads/_0021_Chihuahua.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // image: "http://www.woofipedia.com/images/uploads/_0021_Chihuahua.jpg",
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   },
   {
     name: "Daisy",
@@ -140,11 +140,11 @@ var dogs = [
     age: 4,
     size: ["medium"],
     location: "Richmond",
-    image: "http://www.destinationknowlton.com/gallery/albums/userpics/10001/cute-dauschund-wiener-dogs.jpg",
-    reward: "",
-    phoneNumber: "1234567890",
-    description: "Was found in front of my house wimpering for their owner.",
-    lost: true
+    // image: "http://www.destinationknowlton.com/gallery/albums/userpics/10001/cute-dauschund-wiener-dogs.jpg",
+    // reward: "",
+    // phoneNumber: "1234567890",
+    // description: "Was found in front of my house wimpering for their owner.",
+    // lost: true
   }
 ];
 
