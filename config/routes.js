@@ -10,8 +10,10 @@ router.route('/dashboard')
   .get(dogsController.index)
   .post(dogsController.createDog);
 router.route('/dashboard/:id')
-  .get(dogsController.show);
+  .get(dogsController.show)
+  .put(dogsController.update);
 router.route('/users/:id')
   .get(usersController.show);
+
 
 module.exports = router;
