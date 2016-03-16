@@ -65,11 +65,21 @@ var dogsController = {
 
   show: function (req, res) {
     var id = req.params.id;
+    var poster;
     Dog.findById({_id: id}, function(err, dog) {
       if (err){
         console.log("There was an error : " + err);
       } else {
-        res.render('dogs/show', {dog: dog, user: req.user});
+        // console.log(dog.userId);
+        // take the dogs userId,
+        User.findById(dog.userId, function (err, user) {
+          err ? console.error("Error: " + err) : poster = user;
+          // console.log(poster);
+          res.render('dogs/show', { dog: dog, user: req.user, poster: poster });
+        });
+        // find it's user in the db
+        // store the user in a variable
+        // pass the user variable along with the dog.
       }
     });
   },
