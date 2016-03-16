@@ -1,7 +1,12 @@
+.hover{
+     text-decoration: none !important;
+    text-decoration-line: none !important;
+}
 * {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-size: 1.23em;
+	border-radius: 0 !important;
 }
 
 .navbar {
@@ -12,7 +17,7 @@
     background-size: cover;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
-    padding-left: 1.5em;
+    padding-left: 0em;
     color: #FFF9EA;
 }
 #hero {
@@ -20,15 +25,18 @@
     font-weight: 300;
     font-size: 6em;
     padding: .1em;
+    border: none;
 }
 
 
 #hero:hover {
-    text-decoration:inherit;
+    backface-visibility: visible;
+    pointer-events: visibleStroke;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
     text-shadow: 0 0 .07em #FFF9EA;
-    backface-visibility: visible;
+    text-decoration-line: none;
+    border: none;
     color: #FFF9EA;
     
 }
@@ -43,13 +51,16 @@
 .navbar-info {
     color:  #FFF9EA;
     text-align: right;
-    padding-right: 1em;
+    width:100%;
+    padding-right: 0em;
     padding-top: 0em;
     align-items: baseline;
 }
 .logout {
     text-align: right;
-    margin: .5em;
+    
+    width 100%;
+    margin: 0em;
     margin-top: -.3em;
     margin-bottom: .4em;
     padding: 1em;
@@ -78,7 +89,7 @@
 }
 
 .dog-name {
-    font-weight: 300;
+    font-weight: 500;
     font-size: .666em;
     padding-left: 0em;
     margin-left: 0em;
@@ -142,8 +153,10 @@ img {
 }
 
 a {
-    pointer-events: visibleStroke;
     color: inherit;
-    
-    
+    text-decoration-line: none;
+}
+ a:hover{
+     text-decoration: none !important;
+    text-decoration-line: none !important;
 }
