@@ -15,7 +15,7 @@ var dogSchema = new Schema({
   contact: { type: String, required: true },
   description: { type: String, required: true },
   status: { type: String, enum: ["lost", "found", "sighted"] },
-  userId: [],
+  userId: String,
   createdOn: { type: Date, default: Date.now },
   isActive: { type: Boolean, default: true }
 });

@@ -19,11 +19,12 @@ var dogsController = {
     var age = req.body.age;
     var size = req.body.size;
     var location = req.body.location;
+    var neighborhoods = req.body.neighborhoods;
     var image = req.body.image;
     var reward = req.body.reward;
-    var phoneNumber = req.body.phoneNumber;
+    var contact = req.body.contact;
     var description = req.body.description;
-    var lost = req.body.lost;
+    var status = req.body.status;
     var userid = req.body.userid;
     User.findById({_id: userid}, function(err, user) {
       if (err) {
@@ -36,11 +37,13 @@ var dogsController = {
             age: age,
             size: size,
             location: location,
+            neighborhoods: neighborhoods,
             image: image,
             reward: reward,
-            phoneNumber: phoneNumber,
+            contact: contact,
             description: description,
-            lost: lost
+            status: status,
+            userId: userid
           },
           function (err, dog) {
             if (err) {
