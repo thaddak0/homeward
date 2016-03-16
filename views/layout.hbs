@@ -17,38 +17,8 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-default"> {{!-- "navbar-fixed-top" --}}
-        <div class="container-fluid">
-          <div class="navbar-header">
-              <h1>homeward</h1> {{#if user }}
-              <pre>
-              <li>{{user.fb.firstName}}</li>
-              </pre>
-              <li><a href="/dogs/new">New Posting</a></li>
-              <li><a href="/logout">Logout</a></li>
-              {{else}}
-              <a href="/auth/facebook">Login with Facebook</a> {{/if}}
-          </div>
-        </div>
-    </nav> -->
-    <nav class="navbar col-md-12"> {{!-- "navbar-fixed-top" --}}
-        <div class="container-fluid">
 
-        {{#if user }}
-             <h1 class="hero"><a href="/dashboard">homeward</a></h1>
-            <div class="navbar-info">
-                <div class="user-name">
-                    <a href="/users/{{user._id}}">{{user.fb.firstName}}</a>
-                </div>
-                <a href="/logout">Logout</a>
-         {{else}}
-                 <h1 class="hero">homeward</h1>
-                <p class="logout"><a href="/auth/facebook">Login with Facebook</a></p> {{/if}}
-
-            </div>
-
-        </div>
-    </nav>
+   {{>header}}
 
     <div class="container">
     {{{body}}}
