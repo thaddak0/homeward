@@ -40,19 +40,19 @@ var usersController = {
         if (err){
           console.log("There was an error : " + err);
         } else {
-          var usersDogs = [];
+          var userDogs = [];
           // pups.push(Dog.findById(user.dogs[0]));
           user.dogs.forEach(function (query, index) {
             Dog.findById({_id: user.dogs[index]}, function(err, dog){
               console.log(dog);
-              usersDogs.push(dog);
-              // with console.log here, it shows the value of usersDogs when the surrounding function as a callback.
-              console.log(dogs);
+              userDogs.push(dog);
+              // with console.log here, it shows the value of userDogs when the surrounding function as a callback.
+              console.log(userDogs);
             });
           });
           // with console.log here, it'll be executed before the callback is called #FunctionalProgramming o(^_-)O
           // console.log(dogs);
-          res.render('users/show', {userShow: user, user: req.user, dog: dogs});
+          res.render('users/show', {userShow: user, user: req.user, dog: userDogs});
 
         }
     });
