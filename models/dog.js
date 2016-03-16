@@ -14,6 +14,7 @@ var dogSchema = new Schema({
   phoneNumber: String,
   description: String,
   lost: Boolean,
+  // status: { type: String, enum: ["lost", "found", "sighted"] },
   createdOn: { type: Date, default: Date.now },
   isActive: { type: Boolean, default: true }
 });

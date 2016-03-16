@@ -1,10 +1,17 @@
 var mongoose = require('mongoose');
 var conn = mongoose.connect('mongodb://localhost/homeward');
 var Dog = require("../models/dog");
+var User = require("../models/user");
 
 Dog.remove({}, function(err) {
   if (err) {
     console.log("ERROR:", err);
+  }
+});
+
+User.remove({}, function(err) {
+  if (err) {
+    console.log("error:", err );
   }
 });
 
@@ -150,7 +157,7 @@ var dogs = [
     lost: true
   }
 
-  
+
 ];
 
 Dog.create(dogs, function(err, docs) {

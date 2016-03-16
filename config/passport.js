@@ -44,6 +44,11 @@ module.exports = function(passport){
           newUser.fb.firstName    = profile.name.givenName;
           newUser.fb.lastName     = profile.name.familyName;
           newUser.fb.email        = profile.emails[0].value;
+          newUser.firstName       = profile.name.givenName;
+          newUser.lastName        = profile.name.familyName;
+          newUser.email           = profile.emails[0].value;
+          newUser.dogs            = [];
+          // create user attributes
 
           newUser.save(function(err) {
             if (err)

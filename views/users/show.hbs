@@ -1,17 +1,33 @@
+
+<h1>SHOW PAGE FOR {{user.firstName}}</h1>
+
+
 <div class="row dashboard">
     <div class="col-sm-6 col-md-9 col-centered" id="dashboard-template">
-       
-            <div class="userShow.fb-thumb">
+
+            <!-- <div class="userShow.fb-thumb">
                 <img src={{userShow.fb.image}}>
+            </div> -->
+            <!-- <div class="caption userShow.fb-thumb"> -->
+
+                <h5><span class = "attributes">First Name:</span> {{user.firstName}}</h4>
+                <h5><span class = "attributes">Last Name:</span> {{user.lastName}}</h5>
+                <h5><span class = "attributes">Email:</span> {{user.email}}</h5>
+
             </div>
-            <div class="caption userShow.fb-thumb">
-                
-                <h5><span class = "attributes">First Name:</span> {{user.fb.firstName}}</h4>
-                <h5><span class = "attributes">Last Name:</span> {{user.fb.lastName}}</h5>
-                <h5><span class = "attributes">Email:</span> {{user.fb.email}}</h5>
-                
+
+            <div>
+                {{#each dog}}
+                <div class="userShow-dog-image">
+                    <img src={{dog.image}}>
+                </div>
+                <div class="caption userShow.fb-thumb">
+
+                    <h5><span class = "attributes">Name:</span> {{name}}</h4>
+                    <h5><span class = "attributes">Description:</span> {{description}}</h5>
+                    <h5><span class = "attributes">Location:</span> {{location}}</h5>
+
+                </div>
+                {{/each}}
             </div>
     </div>
-</div>
-
-

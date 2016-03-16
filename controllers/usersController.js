@@ -35,17 +35,24 @@ var usersController = {
   },
 
     show: function (req, res) {
-    var id = req.params.id;
-    var userID= id.toString();
-    console.log(userID);
-    console.log("the id", id);
-    User.find({id: id}, function(err, user){
-
+      var id = req.params.id;
+      User.findById({_id: id}, function(err, user){
         if (err){
           console.log("There was an error : " + err);
-        }
-        else{
-          res.render('users/show', {userShow: user, user: req.user});
+        } else {
+          var userDogs = [];
+          // pups.push(Dog.findById(user.dogs[0]));
+          user.dogs.forEach(function (query, index) {
+            Dog.findById({_id: user.dogs[index]}, function(err, dog){
+              console.log(dog);
+              userDogs.push(dog);
+              // with console.log here, it shows the value of userDogs when the surrounding function as a callback.
+              console.log(userDogs);
+            });
+          });
+          // with console.log here, it'll be executed before the callback is called #FunctionalProgramming o(^_-)O
+          // console.log(dogs);
+          res.render('users/show', {userShow: user, user: req.user, dog: userDogs});
 
         }
     });

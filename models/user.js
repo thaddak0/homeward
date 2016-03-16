@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Dog = require('./dog');
 
 var User = mongoose.model('User', {
   fb: {
@@ -11,8 +12,9 @@ var User = mongoose.model('User', {
   firstName: String,
   lastName: String,
   email: String,
-  lostDogs: [],
-  foundDogs: []
+  dogs: [],
+  createdOn: { type: Date, default: Date.now },
+  isActive: { type: Boolean, default: true }
 });
 
 
