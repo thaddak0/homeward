@@ -44,10 +44,12 @@ var dogsController = {
           },
           function (err, dog) {
             if (err) {
+              // console.log(this);
               res.status(500).send();
             } else {
               // res.status(201).send(JSON.stringify(dog));
               user.dogs.push(dog._id);
+              // this.userId.push(userid);
               user.save();
               console.log(user.dogs);
               res.status(201).send(JSON.stringify(dog));
@@ -64,14 +66,11 @@ var dogsController = {
 
       if (err){
         console.log("There was an error : " + err);
-      }
-      else{
+      } else {
         res.render('dogs/show', {dog: dog, user: req.user});
       }
     });
   },
-
-
 
   update: function(req, res){
 
@@ -95,20 +94,5 @@ var dogsController = {
     res.redirect('back');
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = dogsController;
