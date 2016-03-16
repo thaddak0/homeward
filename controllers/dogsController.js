@@ -64,7 +64,47 @@ var dogsController = {
         res.render('dogs/show', {dog: dog, user: req.user});
       }
     });
+  },
+
+
+
+  update: function(req, res){
+
+
+    console.log('updating id ', req.params.id);
+    console.log('received body ', req.body);
+
+    Dog.update({_id: req.params.id}, {
+      name: req.body.name,
+      breed: req.body.breed,
+      color: req.body.color,
+      age: req.body.age,
+      size: req.body.size,
+      location: req.body.location,
+      image: req.body.image,
+      reward: req.body.reward,
+      phoneNumber: req.body.phoneNumber,
+      description: req.body.description,
+    }, function(err){
+      console.log(err);
+    });
+    res.redirect('back');
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = dogsController;
