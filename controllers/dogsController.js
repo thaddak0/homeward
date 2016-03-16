@@ -88,10 +88,11 @@ var dogsController = {
       age: req.body.age,
       size: req.body.size,
       location: req.body.location,
+      neighborhoods: req.body.neighborhoods,
       image: req.body.image,
       reward: req.body.reward,
-      phoneNumber: req.body.phoneNumber,
-      description: req.body.description,
+      contact: req.body.contact,
+      description: req.body.description
     }, function(err){
       console.log(err);
     });
