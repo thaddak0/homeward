@@ -5,17 +5,17 @@ var Schema = mongoose.Schema;
 var dogSchema = new Schema({
   name: { type: String, default: "unknown" },
   breed: { type: String, default: "unknown" },
-  color: { type: String, required: true },
+  color: { type: String},
   age: { type: Number, max: 50 },
   size: { type: String, enum: ["small", "medium", "large"] },
   location: String,
   neighborhoods: { type: String, enum: neighborhoods },
   image: { type: String, default: "" },
   reward: String,
-  contact: { type: String, required: true },
-  description: { type: String, required: true },
+  contact: { type: String},
+  description: { type: String},
   status: { type: String, enum: ["lost", "found", "sighted"] },
-  userId: [],
+  userId: String,
   createdOn: { type: Date, default: Date.now },
   isActive: { type: Boolean, default: true }
 });

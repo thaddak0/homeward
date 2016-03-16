@@ -1,9 +1,9 @@
 {{#if user }}
 <div class="add-dog-button">
-    <button class="btn btn-primary" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
-      Post Pup
+    <button class="btn btn-primary addDog" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
+        Post Pup
     </button>
-    </div>
+</div>
 
 {{/if}}
 
@@ -61,54 +61,45 @@
 
 
 <div class="modal fade" id="new-dog-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h1>add a dog to homeward</h1>
-      </div>
-
-  <div class="modal-body">
-    <div class="container-fluid">
-
-        <form id="new-dog-form" class="form" onsubmit="homeward.createDog(event)">
-
-            <div class="radio">
-            <label>
-                <input type="radio" id="lost" name="lost" value="true" checked>
-                Lost Dog
-            </label>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1>add a dog to homeward</h1>
             </div>
-            <div class="radio">
-            <label>
-                <input type="radio" id="found" name="lost" value="false">
-                Found Dog
-            </label>
-            </div>
-            <!-- <div class="form-group col-md-4">
-            <input name="lost"  class="form-control" placeholder="Lost or Found" required='true'/>
-            </div> -->
-            <div class="form-group col-md-4">
-            <input name="name" class="form-control" placeholder="Dog Name" required='true'/>
-          </div>
 
-            <div class="form-group col-md-4">
-            <input name="description" class="form-control" placeholder="Description" required='true'/>
-          </div>
+                  <div class="modal-body">
+                      <div class="container-fluid">
 
+                        <form id="new-dog-form" class="form" onsubmit="homeward.createDog(event)">
 
-            <!-- <div class="form-group col-md-4">
-            <input class= type="submit" value="Add Dog"/>
-
-          </div> -->
-            <input type="hidden" name="userid" value={{user._id}}>
-
-              <input type="submit"  class="btn btn-primary col-md-12">
+                        <!-- <div class="radio">
+                            <label>
+                                <input type="radio" id="lost" name="lost" value="true" checked> Lost Dog
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="found" name="lost" value="false"> Found Dog
+                            </label>
+                        </div> -->
+                        <div class="form-group col-md-4">
+                            <input name="name" class="form-control" placeholder="Dog Name" required='true' />
+                        </div>
+                        <div class="form-group col-md-4">
+                        <input name="description" class="form-control" placeholder="Description" required='true'/>
+                      </div>
 
 
-        </form>
-      </div>
+                        <input type="hidden" name="userid" value={{user._id}}>
+
+                        <input type="submit"  class="btn btn-primary col-md-12" value="Add Dog">
+
+
+                      </form>
+
   </div>
   </div>
   </div>
+</div>
 </div>

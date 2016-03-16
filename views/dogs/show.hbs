@@ -1,9 +1,9 @@
 
-<h1>SHOW PAGE FOR {{dog.name}}</h1>
+<h1>{{dog.status}}</h1>
 
 
 <div class="add-dog-button">
-    <button class="btn btn-primary" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
+    <button class="btn btn-primary" id="addDog" data-toggle="modal" data-target="#edit-dog-modal">
       Edit Pup
     </button>
     </div>
@@ -11,7 +11,7 @@
 
 <div class="row dashboard">
     <div class="col-sm-6 col-md-9 col-centered" id="dashboard-template">
-       
+
             <div class="dog-thumb">
                 <img src={{dog.image}}>
             </div>
@@ -29,10 +29,10 @@
 
     </div>
 </div>
- 
+
  {{!-- EDIT MODAL --}}
 
-<div class="modal fade" id="new-dog-modal" tabindex="-1" role="dialog">
+<div class="modal fade" id="edit-dog-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -45,12 +45,12 @@
 
    <!--    Start Form -->
      <section class="container dogModal">
-  
+
       <div class="col-md-6 col-md-offset-1">
 
         <form method="post" action="/dashboard/{{dog.id}}?_method=PUT" class="form-horizontal text-center move">
 
-            
+
 
             <!-- Text input-->
             <div class="form-group">
@@ -148,15 +148,10 @@
               </div>
         </form>
           </div>
-         
+
         </section>
-      
+
          </div>
         </div>
        </div>
       </div>
-</div>
-
-
-
-
