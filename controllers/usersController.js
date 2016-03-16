@@ -43,15 +43,11 @@ var usersController = {
         var userDogs = [];
         // pups.push(Dog.findById(user.dogs[0]));
         user.dogs.forEach(function (query) {
-<<<<<<< HEAD
-          Dog.findById({_id: query}, function(err, dog) {
-=======
           userDogs.push(query);
           // console.log(query);
         });
         // console.log(userDogs);
           Dog.find({_id: {$in: userDogs}}, function(err, dog){
->>>>>>> controllers
             console.log(dog);
             // userDogs.push(dog);
             // with console.log here, it shows the value of userDogs when the surrounding function as a callback.
