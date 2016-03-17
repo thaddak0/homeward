@@ -1,234 +1,296 @@
+<!-- button to add a new dog that pull up the modal for new pup -->
 {{#if user }}
-<div class="add-dog-button">
-    <button class="btn btn-primary addDog" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
-        Post Pup
-    </button>
+<button class="btn btn-primary addDog" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
+    Post Pup
+</button>
+
+
+<button class="btn btn-primary addDog" onclick="homeward.getAllDogs(homeward.renderDogs)">
+  All Dogs
+</button>
+
+<button class="btn btn-primary addDog" onclick="homeward.renderLostDogs({{dogs}})">
+  Lost dogs
+</button>
+
+<button class="btn btn-primary addDog" onclick="homeward.renderFoundDogs({{dogs}})">
+  Found dogs
+</button>
+
+<button class="btn btn-primary addDog" onclick="homeward.renderSightedDogs({{dogs}})">
+  Sighted dogs
+</button>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Size <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <div onclick="homeward.renderSizeDogs({{dogs}}, 'small')">Small</div>
+    <div onclick="homeward.renderSizeDogs({{dogs}}, 'medium')">Medium</div>
+    <div onclick="homeward.renderSizeDogs({{dogs}}, 'large')">Large</div>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Neighborhoods <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Bernal Heights')">Bernal Heights</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'The Castro')">The Castro</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Chinatown')">Chinatown</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Cole Valley')">Cole Valley</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Deco Ghetto')">Deco Ghetto</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Fisherman's Wharf')">Fisherman's Wharf</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Golden Gate Park')">Golden Gate Park</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'The Haight')">The Haight</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Hayes Valley')">Hayes Valley</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Inner Richmond')">Inner Richmond</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Inner Sunset')">Inner Sunset</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'The Marina')">The Marina</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'The Mission')">The Mission</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Mission to Potrero')">Mission to Potrero</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Dolores and Valencia Corridor')">Dolores and Valencia Corridor</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, '24th Street')">24th Street</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Nob Hill')">Nob Hill</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Noe Valley')">Noe Valley</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'North Beach')">North Beach</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Outer Richmond')">Outer Richmond</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Outer Sunset')">Outer Sunset</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Pacific Heights')">Pacific Heights</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Potrero Hill')">Potrero Hill</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Russian Hill')">Russian Hill</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'SoMa')">SoMa</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Tenderloin')">Tenderloin</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Union Square')">Union Square</div>
+    <div onclick="homeward.renderNeighborhoodDogs({{dogs}}, 'Western Addition')">Western Addition</div>
+
+  </ul>
+</div>
+
+
+<script>
+  homeward.getAllDogs(homeward.renderDogs);
+</script>
+
+
+<div id="doglist">
 </div>
 
 {{/if}}
 
-<div class="col-sm-10 col-lg-12 col-xl-18 col-center" id="doglist">
+<!-- script for rendering all dogs -->
+<script id="doglisttemp" type="text/x-handlebars-template">
+<div class="col-sm-10 col-lg-12 col-xl-18 col-center">
+    \{{#each dogs}}
 
-    <!--server side rendering of all the dogs  -->
-    {{#each dogs}}
-    <div class="row">
+
+        <div class="row">
+
+
         <container class="index">
-
-            <img src={{image}}>
-
-
+            <img src=\{{image}}>
             <div class="data" class="index">
-                <a href="/dashboard/{{_id}}" class="attributes">
-                    <h4 class="dog-name" id="dog-name">{{name}}</h4> </a>
-                <h5><span class = "bold">breed:</span> {{breed}}</h5>
-                <h5><span class = "bold">color:</span> {{color}}</h5>
-                <h5><span class = "bold">size:</span> {{size}}</h5>
-                <h5><span class = "bold">location:</span> {{location}}</h5>
-                <h5><span class = "bold">reward:</span> {{reward}}</h5>
-                <h5><span class = "bold">phoneNumber:</span> {{phoneNumber}}</h5>
-                <h5><span class = "bold">description:</span> {{description}}</h5>
-                <h5><span class = "bold">lost:</span> {{lost}}</h5>
+                <a href="/dashboard/\{{_id}}" class="attributes"><h4 class="dog-name" id="dog-name">\{{name}}</h4> </a>
+                <h5><span class = "bold">name:</span> \{{name}}</h5>
+                <h5><span class = "bold">breed:</span> \{{breed}}</h5>
+                <h5><span class = "bold">age:</span> \{{age}}</h5>
+                <h5><span class = "bold">size:</span> \{{size}}</h5>
+                <h5><span class = "bold">location:</span> \{{location}}</h5>
+                <h5><span class = "bold">neighborhoods:</span> \{{neighborhoods}}</h5>
+                <h5><span class = "bold">reward:</span> \{{reward}}</h5>
+                <h5><span class = "bold">contact:</span> \{{contact}}</h5>
+                <h5><span class = "bold">status:</span> \{{status}}</h5>
+                <h5><span class = "bold">description:</span> \{{description}}</h5>
             </div>
-
         </container>
     </div>
-
-    {{/each}}
-
+    \{{/each}}
 </div>
-
-<!-- script for client side rendering of new dogs -->
-<script id="dog-template" type="text/x-handlebars-template">
-
-  <div class="row">
-      <container class="index">
-
-          <img src=\{{dog.image}}>
+</script>
 
 
-                    <div class="data" class="index">
-                        <a href="/dashboard/\{{_id}}" class="attributes"><h4 class="dog-name" id="dog-name">\{{dog.name}}</h4> </a>
-                        <h5><span class = "bold">name:</span> \{{dog.name}}</h5>
-                        <h5><span class = "bold">breed:</span> \{{dog.breed}}</h5>
-                        <h5><span class = "bold">age:</span> \{{dog.age}}</h5>
-                        <h5><span class = "bold">size:</span> \{{dog.size}}</h5>
-                        <h5><span class = "bold">location:</span> \{{dog.location}}</h5>
-                        <h5><span class = "bold">neighborhoods:</span> \{{dog.neighborhoods}}</h5>
-                        <h5><span class = "bold">reward:</span> \{{dog.reward}}</h5>
-                        <h5><span class = "bold">contact:</span> \{{dog.contact}}</h5>
-                        <h5><span class = "bold">status:</span> \{{dog.status}}</h5>
-                        <h5><span class = "bold">description:</span> \{{dog.description}}</h5>
-                    </div>
-                </container>
+<div class="modal fade" id="new-dog-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1>add a dog to homeward</h1>
+      </div>
+
+        <div class="modal-body">
+        {{!-- <div class="container-fluid"> --}}
+
+
+<section class="container dogModal">
+
+<div class="col-md-6 col-md-offset-1">
+
+  <form id="new-dog-form" class="form form-horizontal text-center move" onsubmit="homeward.createDog(event)">
+
+
+          <div class="form-group">
+              <label class="col-md-6 control-label" for="size"></label>
+              <div class="col-md-6">
+              <select class="form-control" id="status" name="status" value="{{dog.status}}">
+                <option disabled selected>Lost, Found or Sighted</option>
+                <option>lost</option>
+                <option>found</option>
+                <option>sighted</option>
+              </select>
+           </div>
+           </div
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="name"></label>
+              <div class="col-md-6">
+              <input id="dogName" name="name" type="text" placeholder="name" value="{{dog.name}}" class="form-control input-md" required="">
+
+              </div>
             </div>
-          </script>
 
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="breed"></label>
+              <div class="col-md-6">
+              <input id="dogBreed" name="breed" type="text" placeholder="breed" value="{{dog.breed}}" class="form-control input-md">
 
-
-
-          <div class="modal fade" id="new-dog-modal" tabindex="-1" role="dialog">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                          <h1>add a dog to homeward</h1>
-                      </div>
-
-                            <div class="modal-body">
-                                <div class="container-fluid">
-
-            <form id="new-dog-form" class="form form-horizontal text-center move" onsubmit="homeward.createDog(event)">
-
-
-                    <div class="form-group">
-                        <label class="col-md-6 control-label" for="size"></label>
-                        <select class="form-control" id="status" name="status" value="{{dog.status}}">
-                          <option>lost</option>
-                          <option>found</option>
-                          <option>sighted</option>
-                        </select>
-                     </div>
-
-                      <!-- Text input-->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="name"></label>
-                        <div class="col-md-6">
-                        <input id="dogName" name="name" type="text" placeholder="name" value="{{dog.name}}" class="form-control input-md" required="">
-
-                        </div>
-                      </div>
-
-                      <!-- Text input-->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="breed"></label>
-                        <div class="col-md-6">
-                        <input id="dogBreed" name="breed" type="text" placeholder="breed" value="{{dog.breed}}" class="form-control input-md">
-
-                        </div>
-                      </div>
-
-                      <!-- Text input-->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="color"></label>
-                        <div class="col-md-6">
-                        <input id="dogColor" name="color" type="text" placeholder="color" value="{{dog.color}}" class="form-control input-md">
-
-                        </div>
-                      </div>
-
-
-                           <!-- Textarea -->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="age"></label>
-                        <div class="col-md-6">
-                          <input class="form-control" id="dogAge" name="age" placeholder="age" value="{{dog.age}}"></input>
-                        </div>
-                      </div>
-
-                      {{!-- drop down menu for SIZE --}}
-
-                     <div class="form-group">
-                        <label class="col-md-6 control-label" for="size"></label>
-                        <select class="form-control" id="size" name="size" value="{{dog.size}}">
-                          <option>small</option>
-                          <option>medium</option>
-                          <option>large</option>
-                        </select>
-                     </div>
-
-                        <!-- Textarea -->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="location"></label>
-                        <div class="col-md-6">
-                          <input class="form-control" id="dogLocation" name="location" placeholder="street location" value="{{dog.location}}"></input>
-                        </div>
-                      </div>
-
-
-                        {{!-- drop down menu for NEIGHBORHOOD --}}
-
-                     <div class="form-group">
-                        <label class="col-md-6 control-label" for="size"></label>
-                        <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}">
-                          <option>Bernal Heights</option>
-                            <option>The Castro</option>
-                            <option>Chinatown</option>
-                            <option>Cole Valley</option>
-                            <option>Deco Ghetto</option>
-                            <option>Fisherman's Wharf</option>
-                            <option>Golden Gate Park</option>
-                            <option>The Haight</option>
-                            <option>Hayes Valley</option>
-                            <option>Inner Richmond</option>
-                            <option>Inner Sunset</option>
-                            <option>The Marina</option>
-                            <option>The Mission</option>
-                            <option>Mission to Potrero</option>
-                            <option>Dolores and Valencia Corridor</option>
-                            <option>24th Street</option>
-                            <option>Nob Hill</option>
-                            <option>Noe Valley</option>
-                            <option>North Beach</option>
-                            <option>Outer Richmond</option>
-                            <option>Outer Sunset</option>
-                            <option>Pacific Heights</option>
-                            <option>Potrero Hill</option>
-                            <option>Russian Hill</option>
-                            <option>SoMa</option>
-                            <option>Tenderloin</option>
-                            <option>Union Square</option>
-                            <option>Western Addition</option>
-
-
-                        </select>
-                     </div>
-
-
-                        <!-- Text input-->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="image"></label>
-                        <div class="col-md-6">
-                        <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
-
-                        </div>
-                      </div>
-
-                      <!-- Text input-->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="reward"></label>
-                        <div class="col-md-6">
-                        <input id="dogReward" name="reward" type="text" placeholder="reward" value="{{dog.reward}}" class="form-control input-md">
-
-                        </div>
-                      </div>
-
-                        <!-- Text input-->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="contact"></label>
-                        <div class="col-md-6">
-                        <input id="dogContact" name="contact" type="text" placeholder="contact" value="{{dog.contact}}" class="form-control input-md">
-
-                        </div>
-                      </div>
-
-                      <!-- Textarea -->
-                      <div class="form-group">
-                        <label class="col-md-6 control-label" for="description"></label>
-                        <div class="col-md-6">
-                          <textarea class="form-control" id="dogDescript" name="description" placeholder="description" value="{{dog.description}}"></textarea>
-                        </div>
-                      </div>
-
-
-                    <input type="hidden" name="userid" value={{user._id}}>
-
-                    <input type="submit"  class="btn btn-primary col-md-12" value="Add Dog">
-
-
-                </form>
-
+              </div>
             </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="color"></label>
+              <div class="col-md-6">
+              <input id="dogColor" name="color" type="text" placeholder="color" value="{{dog.color}}" class="form-control input-md">
+
+              </div>
             </div>
+
+
+                 <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="age"></label>
+              <div class="col-md-6">
+                <input class="form-control" id="dogAge" name="age" placeholder="age" value="{{dog.age}}"></input>
+              </div>
             </div>
+
+            {{!-- drop down menu for SIZE --}}
+
+           <div class="form-group">
+              <label class="col-md-6 control-label" for="size"></label>
+              <div class="col-md-6">
+              <select class="form-control" id="size" name="size" value="{{dog.size}}">
+                <option disabled selected>Size</option>
+                <option>small</option>
+                <option>medium</option>
+                <option>large</option>
+              </select>
+           </div>
+           </div>
+
+              <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="location"></label>
+              <div class="col-md-6">
+                <input class="form-control" id="dogLocation" name="location" placeholder="street location" value="{{dog.location}}"></input>
+              </div>
+            </div>
+
+
+              {{!-- drop down menu for NEIGHBORHOOD --}}
+
+           <div class="form-group">
+              <label class="col-md-6 control-label" for="size"></label>
+              <div class="col-md-6">
+              <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}">
+                  <option disabled selected>Neighborhood</option>
+                  <option>Bernal Heights</option>
+                  <option>The Castro</option>
+                  <option>Chinatown</option>
+                  <option>Cole Valley</option>
+                  <option>Deco Ghetto</option>
+                  <option>Fisherman's Wharf</option>
+                  <option>Golden Gate Park</option>
+                  <option>The Haight</option>
+                  <option>Hayes Valley</option>
+                  <option>Inner Richmond</option>
+                  <option>Inner Sunset</option>
+                  <option>The Marina</option>
+                  <option>The Mission</option>
+                  <option>Mission to Potrero</option>
+                  <option>Dolores and Valencia Corridor</option>
+                  <option>24th Street</option>
+                  <option>Nob Hill</option>
+                  <option>Noe Valley</option>
+                  <option>North Beach</option>
+                  <option>Outer Richmond</option>
+                  <option>Outer Sunset</option>
+                  <option>Pacific Heights</option>
+                  <option>Potrero Hill</option>
+                  <option>Russian Hill</option>
+                  <option>SoMa</option>
+                  <option>Tenderloin</option>
+                  <option>Union Square</option>
+                  <option>Western Addition</option>
+
+
+              </select>
+           </div>
           </div>
-          </div>
+
+
+              <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="image"></label>
+              <div class="col-md-6">
+              <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="reward"></label>
+              <div class="col-md-6">
+              <input id="dogReward" name="reward" type="text" placeholder="reward" value="{{dog.reward}}" class="form-control input-md">
+
+              </div>
+            </div>
+
+              <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="contact"></label>
+              <div class="col-md-6">
+              <input id="dogContact" name="contact" type="text" placeholder="contact" value="{{dog.contact}}" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="description"></label>
+              <div class="col-md-6">
+                <textarea class="form-control" id="dogDescript" name="description" placeholder="description" value="{{dog.description}}"></textarea>
+              </div>
+            </div>
+
+
+          <input type="hidden" name="userid" value={{user._id}}>
+
+          <input type="submit"  class="btn btn-primary col-md-12" value="Add Dog">
+
+
+       </form>
+       </div>
+
+      </section>
+
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>

@@ -14,6 +14,8 @@ router.route('/dashboard/:id')
   .put(dogsController.update);
 router.route('/users/:id')
   .get(usersController.show);
+router.route('/dogs')
+  .get(dogsController.getAllDogs);
 
 
 module.exports = router;

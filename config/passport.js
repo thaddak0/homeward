@@ -21,7 +21,7 @@ module.exports = function(passport){
     profileFields   : ['name', 'emails']
   }, function(access_token, refresh_token, profile, done) {
 
-    // // Use this to see the information returned from Facebook
+    // Use this to see the information returned from Facebook
     // console.log(profile);
     var useremail = profile.emails[0].value;
     var user = User.find({email: useremail}) || User.create({
