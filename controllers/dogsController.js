@@ -98,8 +98,8 @@ var dogsController = {
       // then Dog.update(dog.id);
     // }
     // redirect("back");
-    console.log('updating id ', this);
-    // console.log('received body ', req.body);
+    console.log(req.body.userid);
+    // console.log(dog.userId);
 
     Dog.update({_id: req.params.id}, {
       name: req.body.name,
