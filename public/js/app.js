@@ -13,8 +13,6 @@ console.log('linked');
     });
   };
 
-
-
   homeward.createDog = function(e) {
     e.preventDefault();
     console.log(e);
@@ -66,29 +64,29 @@ homeward.renderLostDogs = function(dogs){
     for (var i = 0; i < dogs.length; i++) {
       if (dogs[i].status == "lost") {
         lostdogs.push(dogs[i]);
-      };
-    };
+      }
+    }
     var dogTemplate = Handlebars.compile($('#doglisttemp').html());
     var compiledHTML = dogTemplate({dogs: lostdogs});
     $doglist.append(compiledHTML);
     console.log("dogs", lostdogs);
 
-};
+  };
 
-homeward.renderFoundDogs = function(dogs){
-  console.log(dogs);
-  var $doglist = $('#doglist');
-  $doglist.html("");
-  var founddogs = [];
-  console.log("this");
-    for (var i = 0; i < dogs.length; i++) {
-      if (dogs[i].status == "found") {
-        founddogs.push(dogs[i]);
-      };
-    };
-    var dogTemplate = Handlebars.compile($('#doglisttemp').html());
-    var compiledHTML = dogTemplate({dogs: founddogs});
-    $doglist.append(compiledHTML);
-    console.log("dogs", founddogs);
+  homeward.renderFoundDogs = function(dogs){
+    console.log(dogs);
+    var $doglist = $('#doglist');
+    $doglist.html("");
+    var founddogs = [];
+    console.log("this");
+      for (var i = 0; i < dogs.length; i++) {
+        if (dogs[i].status == "found") {
+          founddogs.push(dogs[i]);
+        }
+      }
+      var dogTemplate = Handlebars.compile($('#doglisttemp').html());
+      var compiledHTML = dogTemplate({dogs: founddogs});
+      $doglist.append(compiledHTML);
+      console.log("dogs", founddogs);
 
-};
+  };

@@ -92,10 +92,14 @@ var dogsController = {
     });
   },
 
-  update: function(req, res){
-
-    console.log('updating id ', req.params.id);
-    console.log('received body ', req.body);
+  update: function(req, res) {
+    // var dogId = req.params.id
+    // if (dog.userId === req.user.id) {
+      // then Dog.update(dog.id);
+    // }
+    // redirect("back");
+    console.log('updating id ', this);
+    // console.log('received body ', req.body);
 
     Dog.update({_id: req.params.id}, {
       name: req.body.name,
@@ -113,6 +117,13 @@ var dogsController = {
       console.log(err);
     });
     res.redirect('back');
+  },
+
+  deleteDog: function (req, res) {
+    // var dog = req.<the passed in dog to be deleted>
+    // if dog.userId === req.user.id
+      // then Dog.remove(dog.id);
+    // redirect("back");
   }
 };
 
