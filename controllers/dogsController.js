@@ -7,10 +7,21 @@ var dogsController = {
       if (err) {
         console.log("Error: ", err);
       } else {
-        res.render('dogs/dashboard', {dogs: dogs.reverse(), user: req.user});
+        res.render('dogs/dashboard', {dogs: JSON.stringify(dogs), user: req.user});
       }
     });
   },
+
+  getAllDogs: function (req, res) {
+    Dog.find({}, function (err, dogs) {
+      if (err) {
+        console.log("Error: ", err);
+      } else {
+        res.status(201).send(JSON.stringify(dogs.reverse()));
+      }
+    });
+  },
+
 
   createDog: function (req, res) {
     var name = req.body.name;
@@ -77,9 +88,6 @@ var dogsController = {
           // console.log(poster);
           res.render('dogs/show', { dog: dog, user: req.user, poster: poster });
         });
-        // find it's user in the db
-        // store the user in a variable
-        // pass the user variable along with the dog.
       }
     });
   },

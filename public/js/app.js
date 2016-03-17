@@ -1,18 +1,20 @@
 console.log('linked');
 
   var homeward = {};
-  //
-  // homeward.getDogs = function(callback) {
-  //
-  //   // send an AJAX request for
-  //   $.get("/dashboard").done(function(dogs) {
-  //     var dog = JSON.parse(dogs);
-  //     callback(dog);
-  //   }).fail(function (err) {
-  //     console.log("Error: ", err);
-  //   });
-  // };
-  //
+
+  homeward.getAllDogs = function(callback) {
+
+    // send an AJAX request for
+    $.get("/dogs").done(function(dogs) {
+      var dogs = JSON.parse(dogs);
+      callback(dogs);
+    }).fail(function (err) {
+      console.log("Error: ", err);
+    });
+  };
+
+
+
   homeward.createDog = function(e) {
     e.preventDefault();
     console.log(e);
@@ -41,3 +43,16 @@ homeward.renderDog = function(dog){
   $doglist.prepend(compiledHTML);
   console.log("dog", dog);
 };
+
+homeward.renderDogs = function(dogs){
+  console.log(dogs);
+  var $doglist = $('#doglist');
+  // $doglist.html("");
+  var dogTemplate = Handlebars.compile($('#doglisttemp').html());
+  console.log("dogtemplate", dogTemplate);
+  var compiledHTML = dogTemplate({dogs: dogs});
+  console.log("compiledHTML", compiledHTML);
+  $doglist.append(compiledHTML);
+  console.log("dogs", dogs);
+};
+// document.onload = homeward.renderDogs({{dogs}});
