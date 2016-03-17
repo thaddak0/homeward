@@ -19,7 +19,7 @@ var dogsController = {
         console.log("Error: ", err);
       } else {
 
-        res.status(201).send(JSON.stringify(dogs));
+        res.status(201).send(JSON.stringify(dogs.reverse()));
       }
     });
   },
@@ -60,10 +60,12 @@ var dogsController = {
           },
           function (err, dog) {
             if (err) {
+              // console.log(this);
               res.status(500).send();
             } else {
               // res.status(201).send(JSON.stringify(dog));
               user.dogs.push(dog._id);
+              // this.userId.push(userid);
               user.save();
               console.log(user.dogs);
               res.status(201).send(JSON.stringify(dog));
@@ -76,31 +78,24 @@ var dogsController = {
 
   show: function (req, res) {
     var id = req.params.id;
-    Dog.findById({_id: id}, function(err, dog){
-
+    var poster;
+    Dog.findById({_id: id}, function(err, dog) {
       if (err){
         console.log("There was an error : " + err);
-      }
-      else {
-        var dogUser;
-
-          User.findById({_id: dog.userId}, function(err, user){
-            if (err) {
-              console.error("Error: " + err);
-            } else {
-              dogUser = user
-              // with console.log here, it shows the value of userDogs when the surrounding function as a callback.
-              console.log("THIS INFO IS BEING SAVED AS DOGUSER:", dogUser);
-            }
-          });
-
-        // with console.log here, it'll be executed before the callback is called #FunctionalProgramming o(^_-)O
-        res.render('dogs/show', {dog: dog, user: req.user, dogUser: dogUser});
+      } else {
+        // console.log(dog.userId);
+        // take the dogs userId,
+        User.findById(dog.userId, function (err, user) {
+          err ? console.error("Error: " + err) : poster = user;
+          // console.log(poster);
+          res.render('dogs/show', { dog: dog, user: req.user, poster: poster });
+        });
+        // find it's user in the db
+        // store the user in a variable
+        // pass the user variable along with the dog.
       }
     });
   },
-
-
 
   update: function(req, res){
 
@@ -125,20 +120,5 @@ var dogsController = {
     res.redirect('back');
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = dogsController;
