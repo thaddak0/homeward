@@ -194,7 +194,10 @@ a {
 .form-control {
 
     width: 260%;
- }		  
+ }		  }
 
-
++.selections {
++
++    float: right;
++}
 /*breaks @ 995*/
