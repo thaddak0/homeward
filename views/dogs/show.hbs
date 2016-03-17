@@ -91,120 +91,129 @@
               </div>
             </div>
 
-              <!-- Textarea -->
+            <!-- Textarea -->
 
-           <div class="form-group">
-              <label class="col-md-6 control-label" for="size"></label>
-              <select class="form-control" id="size" name="size" value="{{dog.size}}">
-                <option>small</option>
-                <option>medium</option>
-                <option>large</option>
-              </select>
-           </div>
-
-              <!-- Textarea -->
-            <div class="form-group">
-              <label class="col-md-6 control-label" for="location"></label>
-              <div class="col-md-6">
-                <input class="form-control" id="dogLocation" name="location" placeholder="location" value="{{dog.location}}"></input>
-              </div>
-            </div>
-
-              <div class="form-group">
-              <label class="col-md-6 control-label" for="size"></label>
-              <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}">
-                <option>Bernal Heights</option>
-                  <option>The Castro</option>
-                  <option>Chinatown</option>
-                  <option>Cole Valley</option>
-                  <option>Deco Ghetto</option>
-                  <option>Fisherman's Wharf</option>
-                  <option>Golden Gate Park</option>
-                  <option>The Haight</option>
-                  <option>Hayes Valley</option>
-                  <option>Inner Richmond</option>
-                  <option>Inner Sunset</option>
-                  <option>The Marina</option>
-                  <option>The Mission</option>
-                  <option>Mission to Potrero</option>
-                  <option>Dolores and Valencia Corridor</option>
-                  <option>24th Street</option>
-                  <option>Nob Hill</option>
-                  <option>Noe Valley</option>
-                  <option>North Beach</option>
-                  <option>Outer Richmond</option>
-                  <option>Outer Sunset</option>
-                  <option>Pacific Heights</option>
-                  <option>Potrero Hill</option>
-                  <option>Russian Hill</option>
-                  <option>SoMa</option>
-                  <option>Tenderloin</option>
-                  <option>Union Square</option>
-                  <option>Western Addition</option>
-
-
-              </select>
-           </div>
-
-              <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-6 control-label" for="image"></label>
-              <div class="col-md-6">
-              <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
-
-              </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-6 control-label" for="reward"></label>
-              <div class="col-md-6">
-              <input id="dogReward" name="reward" type="text" placeholder="reward" value="{{dog.reward}}" class="form-control input-md">
-
-              </div>
-            </div>
-
-              <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-6 control-label" for="contact"></label>
-              <div class="col-md-6">
-              <input id="contact" name="contact" type="text" placeholder="Contact" value="{{dog.contact}}" class="form-control input-md">
-
-              </div>
-            </div>
-
-
-
-          <div class="form-group">
-              <label class="col-md-6 control-label" for="size"></label>
-              <select class="form-control" id="status" name="status" value="{{dog.status}}">
-                <option>lost</option>
-                <option>found</option>
-                <option>sighted</option>
-              </select>
-           </div>
+         <div class="form-group">
+            <label class="col-md-6 control-label" for="size"></label>
+            <div class="col-md-6">
+            <select class="form-control" id="size" name="size" value="{{dog.size}}">
+              <option disabled selected>Size</option>
+              <option>small</option>
+              <option>medium</option>
+              <option>large</option>
+            </select>
+         </div>
+         </div>
 
             <!-- Textarea -->
-            <div class="form-group">
-              <label class="col-md-6 control-label" for="description"></label>
-              <div class="col-md-6">
-                <textarea class="form-control" id="dogDescript" name="description" placeholder="description" value="{{dog.description}}"></textarea>
-              </div>
+          <div class="form-group">
+            <label class="col-md-6 control-label" for="location"></label>
+            <div class="col-md-6">
+              <input class="form-control" id="dogLocation" name="location" placeholder="location" value="{{dog.location}}"></input>
             </div>
-
-
-
-            <!-- Button -->
-              <label class="col-md-6 control-label" for="singlebutton"></label>
-              <div class="col-md-4">
-                <button id="updating" type="submit" class="btn btn-primary" name="singlebutton">Submit</button>
-              </div>
-        </form>
           </div>
 
-        </section>
+            <div class="form-group">
+            <label class="col-md-6 control-label" for="size"></label>
+            <div class="col-md-6">
+            <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}">
+                <option disabled selected>Neighborhood</option>
+                <option>Bernal Heights</option>
+                <option>The Castro</option>
+                <option>Chinatown</option>
+                <option>Cole Valley</option>
+                <option>Deco Ghetto</option>
+                <option>Fisherman's Wharf</option>
+                <option>Golden Gate Park</option>
+                <option>The Haight</option>
+                <option>Hayes Valley</option>
+                <option>Inner Richmond</option>
+                <option>Inner Sunset</option>
+                <option>The Marina</option>
+                <option>The Mission</option>
+                <option>Mission to Potrero</option>
+                <option>Dolores and Valencia Corridor</option>
+                <option>24th Street</option>
+                <option>Nob Hill</option>
+                <option>Noe Valley</option>
+                <option>North Beach</option>
+                <option>Outer Richmond</option>
+                <option>Outer Sunset</option>
+                <option>Pacific Heights</option>
+                <option>Potrero Hill</option>
+                <option>Russian Hill</option>
+                <option>SoMa</option>
+                <option>Tenderloin</option>
+                <option>Union Square</option>
+                <option>Western Addition</option>
 
+
+            </select>
          </div>
+         </div>
+
+            <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-6 control-label" for="image"></label>
+            <div class="col-md-6">
+            <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
+
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-6 control-label" for="reward"></label>
+            <div class="col-md-6">
+            <input id="dogReward" name="reward" type="text" placeholder="reward" value="{{dog.reward}}" class="form-control input-md">
+
+            </div>
+          </div>
+
+            <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-6 control-label" for="contact"></label>
+            <div class="col-md-6">
+            <input id="contact" name="contact" type="text" placeholder="Contact" value="{{dog.contact}}" class="form-control input-md">
+
+            </div>
+          </div>
+
+
+
+        <div class="form-group">
+            <label class="col-md-6 control-label" for="size"></label>
+            <div class="col-md-6">
+            <select class="form-control" id="status" name="status" value="{{dog.status}}">
+              <option disabled selected>Lost, Found or Sighted</option>
+              <option>lost</option>
+              <option>found</option>
+              <option>sighted</option>
+            </select>
+         </div>
+         </div>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-md-6 control-label" for="description"></label>
+            <div class="col-md-6">
+              <textarea class="form-control" id="dogDescript" name="description" placeholder="description" value="{{dog.description}}"></textarea>
+            </div>
+          </div>
+
+
+
+          <!-- Button -->
+            <label class="col-md-6 control-label" for="singlebutton"></label>
+            <div class="col-md-4">
+              <button id="updating" type="submit" class="btn btn-primary" name="singlebutton">Submit</button>
+            </div>
+      </form>
         </div>
+
+      </section>
+
        </div>
       </div>
+     </div>
+    </div>

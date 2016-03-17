@@ -194,7 +194,6 @@ a {
 .form-control {
 
     width: 260%;
-<<<<<<< HEAD
 }
 
 .selections {
@@ -202,12 +201,4 @@ a {
     float: right;
 }
 
-=======
- }		  }
->>>>>>> development
-
-+.selections {
-+
-+    float: right;
-+}
 /*breaks @ 995*/
