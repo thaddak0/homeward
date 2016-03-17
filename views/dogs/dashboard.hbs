@@ -69,6 +69,12 @@
   </ul>
 </div>
 
+<form onsubmit="homeward.findDogName(event, homeward.renderDogs)">
+  <input type="text" name="name" placeholder="Name"></input>
+   <br/>
+   <input type="submit" value="Search">
+</form>
+
 
 <script>
   homeward.getAllDogs(homeward.renderDogs);

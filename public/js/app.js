@@ -36,23 +36,34 @@ homeward.renderDog = function(dog){
   var dog = JSON.parse(dog);
   console.log(dog);
   var compiledHTML = dogTemplate({dogs: [dog]});
-  console.log("compiledHTML", compiledHTML);
+  // console.log("compiledHTML", compiledHTML);
   $doglist.prepend(compiledHTML);
-  console.log("dog", dog);
+  // console.log("dog", dog);
 };
 
 homeward.renderDogs = function(dogs){
-  console.log(dogs);
+  // console.log(dogs);
   var $doglist = $('#doglist');
   $doglist.html("");
   var dogTemplate = Handlebars.compile($('#doglisttemp').html());
-  console.log("dogtemplate", dogTemplate);
+  // console.log("dogtemplate", dogTemplate);
   var compiledHTML = dogTemplate({dogs: dogs});
-  console.log("compiledHTML", compiledHTML);
+  // console.log("compiledHTML", compiledHTML);
   $doglist.append(compiledHTML);
-  console.log("dogs", dogs);
+  // console.log("dogs", dogs);
 };
 
+homeward.findDogName = function(e, callback){
+  e.preventDefault();
+  var name = $(e.target).serialize();
+  console.log('NAME', name);
+  $.post("/dogs/names", name).done(function(dogs) {
+    var dogs = JSON.parse(dogs);
+    callback(dogs);
+  }).fail(function (err) {
+    console.log("Error: ", err);
+  });
+}
 
 homeward.renderLostDogs = function(dogs){
   console.log(dogs);

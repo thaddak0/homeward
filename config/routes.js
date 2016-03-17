@@ -11,11 +11,14 @@ router.route('/dashboard')
   .post(dogsController.createDog);
 router.route('/dashboard/:id')
   .get(dogsController.show)
-  .put(dogsController.update);
+  .put(dogsController.update)
+  .delete(dogsController.deleteDog);
 router.route('/users/:id')
   .get(usersController.show);
 router.route('/dogs')
   .get(dogsController.getAllDogs);
+router.route('/dogs/names')
+  .post(dogsController.getDogName);
 
 
 module.exports = router;

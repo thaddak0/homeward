@@ -22,6 +22,17 @@ var dogsController = {
     });
   },
 
+  getDogName: function (req, res) {
+     var name = req.body.name;
+     name = name.toLowerCase();
+     Dog.find({name: name}, function(err, dogs){
+       if (err) {
+         console.log("error: ", err);
+       } else {
+         res.status(201).send(JSON.stringify(dogs.reverse()));
+       }
+     })
+   },
 
   createDog: function (req, res) {
     var name = req.body.name;
@@ -120,10 +131,11 @@ var dogsController = {
   },
 
   deleteDog: function (req, res) {
-    // var dog = req.<the passed in dog to be deleted>
-    // if dog.userId === req.user.id
-      // then Dog.remove(dog.id);
-    // redirect("back");
+    Dog.remove({_id: req.params.id},function(err) {
+   if (err) { return console.log(err); }
+   console.log(req.params.id  + "was removed");
+   res.status(200).send(); // everything is a-OK
+    });
   }
 };
 
