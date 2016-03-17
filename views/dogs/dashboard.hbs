@@ -6,8 +6,16 @@
     </button>
 
 </div>
+<button class="btn btn-primary addDog" onclick="homeward.getAllDogs(homeward.renderDogs)">
+  Clear Filters
+</button>
+
 <button class="btn btn-primary addDog" onclick="homeward.renderLostDogs({{dogs}})">
   Lost dogs
+</button>
+
+<button class="btn btn-primary addDog" onclick="homeward.renderFoundDogs({{dogs}})">
+  Found dogs
 </button>
 
 <script>

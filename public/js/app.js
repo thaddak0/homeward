@@ -73,4 +73,22 @@ homeward.renderLostDogs = function(dogs){
     $doglist.append(compiledHTML);
     console.log("dogs", lostdogs);
 
-}
+};
+
+homeward.renderFoundDogs = function(dogs){
+  console.log(dogs);
+  var $doglist = $('#doglist');
+  $doglist.html("");
+  var founddogs = [];
+  console.log("this");
+    for (var i = 0; i < dogs.length; i++) {
+      if (dogs[i].status == "found") {
+        founddogs.push(dogs[i]);
+      };
+    };
+    var dogTemplate = Handlebars.compile($('#doglisttemp').html());
+    var compiledHTML = dogTemplate({dogs: founddogs});
+    $doglist.append(compiledHTML);
+    console.log("dogs", founddogs);
+
+};
