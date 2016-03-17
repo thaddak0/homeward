@@ -70,27 +70,35 @@
 
 
 <div class="modal fade" id="new-dog-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h1>add a dog to homeward</h1>
-            </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1>add a dog to homeward</h1>
+      </div>
 
-                  <div class="modal-body">
-                      <div class="container-fluid">
+        <div class="modal-body">
+        {{!-- <div class="container-fluid"> --}}
+
+
+<section class="container dogModal">
+
+<div class="col-md-6 col-md-offset-1">
 
   <form id="new-dog-form" class="form form-horizontal text-center move" onsubmit="homeward.createDog(event)">
 
 
           <div class="form-group">
               <label class="col-md-6 control-label" for="size"></label>
+              <div class="col-md-6">
               <select class="form-control" id="status" name="status" value="{{dog.status}}">
+                <option disabled selected>Lost, Found or Sighted</option>
                 <option>lost</option>
                 <option>found</option>
                 <option>sighted</option>
               </select>
            </div>
+           </div
 
             <!-- Text input-->
             <div class="form-group">
@@ -132,11 +140,14 @@
 
            <div class="form-group">
               <label class="col-md-6 control-label" for="size"></label>
+              <div class="col-md-6">
               <select class="form-control" id="size" name="size" value="{{dog.size}}">
+                <option disabled selected>Size</option>
                 <option>small</option>
                 <option>medium</option>
                 <option>large</option>
               </select>
+           </div>
            </div>
 
               <!-- Textarea -->
@@ -152,8 +163,10 @@
 
            <div class="form-group">
               <label class="col-md-6 control-label" for="size"></label>
+              <div class="col-md-6">
               <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}">
-                <option>Bernal Heights</option>
+                  <option disabled selected>Neighborhood</option>
+                  <option>Bernal Heights</option>
                   <option>The Castro</option>
                   <option>Chinatown</option>
                   <option>Cole Valley</option>
@@ -185,6 +198,7 @@
 
               </select>
            </div>
+          </div>
 
 
               <!-- Text input-->
@@ -228,10 +242,13 @@
           <input type="submit"  class="btn btn-primary col-md-12" value="Add Dog">
 
 
-      </form>
+       </form>
+       </div>
 
-  </div>
-  </div>
-  </div>
-</div>
-</div>
+      </section>
+
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
