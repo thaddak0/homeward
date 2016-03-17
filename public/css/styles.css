@@ -201,4 +201,11 @@ a {
     float: right;
 }
 
+
+.upload {
+    background: red !important;
+    padding: 10px; 
+
+}
+
 /*breaks @ 995*/

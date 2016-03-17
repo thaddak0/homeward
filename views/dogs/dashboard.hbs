@@ -76,6 +76,8 @@
   </div>
 </script>
 
+
+
 <div class="modal fade" id="new-dog-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -209,13 +211,13 @@
 
 
               <!-- Text input-->
-            <div class="form-group">
+           {{!--  <div class="form-group">
               <label class="col-md-6 control-label" for="image"></label>
               <div class="col-md-6">
               <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
 
               </div>
-            </div>
+            </div> --}}
 
             <!-- Text input-->
             <div class="form-group">
@@ -243,12 +245,11 @@
               </div>
             </div>
 
-
+<input type="hidden" role="uploadcare-uploader" name="image" class="upload"/>
+          
           <input type="hidden" name="userid" value={{user._id}}>
 
           <input type="submit"  class="btn btn-primary col-md-12" value="Add Dog">
-
-
        </form>
        </div>
 
