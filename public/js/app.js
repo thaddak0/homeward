@@ -55,4 +55,22 @@ homeward.renderDogs = function(dogs){
   $doglist.append(compiledHTML);
   console.log("dogs", dogs);
 };
-// document.onload = homeward.renderDogs({{dogs}});
+
+
+homeward.renderLostDogs = function(dogs){
+  console.log(dogs);
+  var $doglist = $('#doglist');
+  $doglist.html("");
+  var lostdogs = [];
+  console.log("this");
+    for (var i = 0; i < dogs.length; i++) {
+      if (dogs[i].status == "lost") {
+        lostdogs.push(dogs[i]);
+      };
+    };
+    var dogTemplate = Handlebars.compile($('#doglisttemp').html());
+    var compiledHTML = dogTemplate({dogs: lostdogs});
+    $doglist.append(compiledHTML);
+    console.log("dogs", lostdogs);
+
+}

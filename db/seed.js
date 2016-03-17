@@ -23,6 +23,7 @@ var dogs = [
     age: 4,
     size: ["small"],
     location: "Noe Valley",
+    status: "lost"
     // image: "https://s-media-cache-ak0.pinimg.com/736x/e0/fb/7c/e0fb7cef22da6f28365c183a8df4ea25.jpg",
     // reward: "$400",
     // phoneNumber: "0123456789",
@@ -49,6 +50,7 @@ var dogs = [
     age: 4,
     size: ["small"],
     location: "Mission",
+    status: "lost"
     // image: "http://animalsbreeds.com/wp-content/uploads/2015/03/Labrador-Retriever-12.jpg",
     // reward: "",
     // phoneNumber: "1234567890",
