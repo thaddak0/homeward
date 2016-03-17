@@ -1,35 +1,5 @@
 <!-- button to add a new dog that pull up the modal for new pup -->
 {{#if user }}
-  <div class="add-dog-button">
-      <button class="btn btn-primary addDog" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
-          Post Pup
-      </button>
-
-  </div>
-  <button class="btn btn-primary addDog" onclick="homeward.getAllDogs(homeward.renderDogs)">
-    Clear Filters
-  </button>
-
-  <button class="btn btn-primary addDog" onclick="homeward.renderLostDogs({{dogs}})">
-    Lost dogs
-  </button>
-
-  <button class="btn btn-primary addDog" onclick="homeward.renderFoundDogs({{dogs}})">
-    Found dogs
-  </button>
-
-  <script>
-    homeward.getAllDogs(homeward.renderDogs);
-  </script>
-
-
-  <div id="doglist">
-  </div>
-
-{{/if}}
-
-<!-- button to add a new dog that pull up the modal for new pup -->
-{{#if user }}
 <div class="add-dog-button">
     <button class="btn btn-primary addDog" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
         Post Pup
