@@ -34,12 +34,13 @@ var dogsController = {
        } else {
          res.status(201).send(JSON.stringify(dogs.reverse()));
        }
-     })
+     });
    },
 
 
   createDog: function (req, res) {
     var name = req.body.name;
+    name = name.toLowerCase();
     var breed = req.body.breed;
     var color = req.body.color;
     var age = req.body.age;
