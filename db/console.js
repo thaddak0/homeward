@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/homeward');
+mongoose.connect(process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL || 'mongodb://localhost/homeward');
 var REPL = require("repl");
 
 var repl = REPL.start("> ");

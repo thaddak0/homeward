@@ -12,9 +12,10 @@ var cookieParser    = require('cookie-parser');
 // var controllers = require('./controllers');
 
 // APPLICATION CONFIGURATION
-mongoose.connect('mongodb://localhost/homeward');
+mongoose.connect(process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL ||'mongodb://localhost/homeward');
 process.on('exit', function () {
-  mongoose.diconnect();
+  mongoose.disconnect();
 });
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');

@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var conn = mongoose.connect('mongodb://localhost/homeward');
+var conn = mongoose.connect(process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL || 'mongodb://localhost/homeward');
 var Dog = require("../models/dog");
 var User = require("../models/user");
 Dog.remove({}, function (err) {
