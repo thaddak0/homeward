@@ -14,16 +14,16 @@
             {{#each dog}}
                 <div id={{_id}}>
                     <a href="/dashboard/{{_id}}"><img src={{image}}></a>
-                    <h4 class="dog-name" id="dog-name">{{dog.name}}</h4>
-                    <h4><span class = "attributes">breed:</span> {{dog.breed}}</h4>
-                    <h4><span class = "attributes">color:</span> {{dog.color}}</h4>
-                    <h4><span class = "attributes">size:</span> {{dog.size}}</h4>
-                    <h4><span class = "attributes">age:</span> {{dog.age}}</h4>
-                    <h4><span class = "attributes">location:</span> {{dog.location}}</h4>
-                    <h4><span class = "attributes">neighborhood:</span> {{dog.neighborhoods}}</h4>
-                    <h4><span class = "attributes">reward:</span> {{dog.reward}}</h4>
-                    <h4><span class = "attributes">contact:</span> {{dog.contact}}</h4>
-                    <h4><span class = "attributes">description:</span> {{dog.description}}</h4>
+                    <h4 class="dog-name" id="dog-name">{{name}}</h4>
+                    <h4><span class = "attributes">breed:</span> {{breed}}</h4>
+                    <h4><span class = "attributes">color:</span> {{color}}</h4>
+                    <h4><span class = "attributes">size:</span> {{size}}</h4>
+                    <h4><span class = "attributes">age:</span> {{age}}</h4>
+                    <h4><span class = "attributes">location:</span> {{location}}</h4>
+                    <h4><span class = "attributes">neighborhood:</span> {{neighborhoods}}</h4>
+                    <h4><span class = "attributes">reward:</span> {{reward}}</h4>
+                    <h4><span class = "attributes">contact:</span> {{contact}}</h4>
+                    <h4><span class = "attributes">description:</span> {{description}}</h4>
                     <button class="btn btn-primary" id="addDog" data-toggle="modal" data-target="#edit-dog-modal{{_id}}">
                     Edit Pup
                     </button>
