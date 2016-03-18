@@ -1,7 +1,6 @@
-.move{
+.move {
     float: left;
 }
-
 
 .form-horizontal .form-group {
     margin-right: 49%;
@@ -9,14 +8,13 @@
 }
 
 .form-control {
-
     width: 260%;
 }
 
 .selections {
-
     float: right;
 }
+
 .hover {
     text-decoration: none !important;
     text-decoration-line: none !important;
@@ -130,6 +128,7 @@
     float: left;
     margin: 0 auto;
 }
+
 .caption {
     max-width: 6em;
     font-size: 2.4em;
@@ -142,7 +141,6 @@
     margin-right: 5%;
     float: left;
 }
-
 
 .data {
     max-width: 6em;
@@ -192,10 +190,10 @@ img {
 #row {
     height: 15.7em;
     width: 95%;
-    max-width:110%;
+    max-width: 110%;
     border: 2px solid #aAaAcf;
     overflow-y: scroll;
-    overflow-x:scroll;
+    overflow-x: scroll;
     padding: .01em;
     margin-top: .6em;
     margin-bottom: .4em;
@@ -208,7 +206,7 @@ img {
 }
 
 .showImage {
-     width: 50%;
+    width: 50%;
     height: 7.777em;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -232,22 +230,21 @@ img {
 
 .btn-info {
     font-size: 18px;
-    background-color: rgba(255,254,253,.24);
+    background-color: rgba(255, 254, 253, .24);
     color: #FFF9EA;
-    border-color:#FFF9EA;
+    border-color: #FFF9EA;
     border-width: 2px;
 }
+
 .btn-primary {
     font-size: auto;
-    background-color: rgba(218,222,254,.24);
+    background-color: rgba(218, 222, 254, .24);
     color: #aAaAcf;
-    border-color:#aAaAcf;
+    border-color: #aAaAcf;
     border-width: 2px;
     margin-top: 2%;
     margin-left: 3.333%;
-
 }
-
 
 h5 {
     font-size: .19em;
@@ -256,29 +253,32 @@ h5 {
 
 .splashDisplay {
     margin-top: 7px;
-    margin-left: 23.5%;
+    margin-left: 20%;
     margin-bottom: .6em;
     text-align: left;
     font-size: 3em;
     font-weight: 400;
+    float: left;
 }
 
 .splashBody {
     padding-top: .3em;
     margin-top: -.5em;
-    margin-left:30%;
+    margin-left: 22%;
     text-align: left;
     font-size: 1em;
     font-weight: 400;
     max-width: 50%;
+    float: left;
 }
 
 .splashCaption {
-    margin-left: 30%;
-    text-align: justify;
+    margin-left: 22%;
+    text-align: left;
     font-size: 1em;
     font-weight: 300;
     max-width: 50%;
+    float: left;
 }
 
 a {
@@ -296,7 +296,6 @@ a:hover {
 /*Edit*/
 
 #updating {
-
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -316,4 +315,3 @@ a:hover {
     width: 50%;
     float: left;
 }
-

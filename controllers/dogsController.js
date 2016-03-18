@@ -7,7 +7,9 @@ var dogsController = {
       if (err) {
         console.log("Error: ", err);
       } else {
+
         res.render('dogs/dashboard', {dogs: JSON.stringify(dogs.reverse()), user: req.user});
+
       }
     });
   },
@@ -22,6 +24,7 @@ var dogsController = {
     });
   },
 
+
   getDogName: function (req, res) {
      var name = req.body.name;
      name = name.toLowerCase();
@@ -31,11 +34,13 @@ var dogsController = {
        } else {
          res.status(201).send(JSON.stringify(dogs.reverse()));
        }
-     })
+     });
    },
+
 
   createDog: function (req, res) {
     var name = req.body.name;
+    name = name.toLowerCase();
     var breed = req.body.breed;
     var color = req.body.color;
     var age = req.body.age;
@@ -131,11 +136,13 @@ var dogsController = {
   },
 
   deleteDog: function (req, res) {
+
     Dog.remove({_id: req.params.id},function(err) {
    if (err) { return console.log(err); }
    console.log(req.params.id  + "was removed");
    res.status(200).send(); // everything is a-OK
     });
+
   }
 };
 

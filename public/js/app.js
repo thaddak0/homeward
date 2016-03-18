@@ -1,5 +1,6 @@
 console.log('linked');
 
+
   var homeward = {};
 
   homeward.getAllDogs = function(callback) {
@@ -14,11 +15,13 @@ console.log('linked');
   };
 
   homeward.createDog = function(e) {
+
     e.preventDefault();
     console.log(e);
     var dog = $(e.target).serialize();
     console.log(dog);
     $.post("/dashboard", dog)
+
       .done(function(res){
         homeward.renderDog(res);
         $(".modal").modal('hide');
@@ -63,7 +66,7 @@ homeward.findDogName = function(e, callback){
   }).fail(function (err) {
     console.log("Error: ", err);
   });
-}
+};
 
 homeward.renderLostDogs = function(dogs){
   console.log(dogs);
@@ -84,11 +87,13 @@ homeward.renderLostDogs = function(dogs){
   };
 
   homeward.renderFoundDogs = function(dogs){
+
     console.log(dogs);
     var $doglist = $('#doglist');
     $doglist.html("");
     var founddogs = [];
     console.log("this");
+
       for (var i = 0; i < dogs.length; i++) {
         if (dogs[i].status == "found") {
           founddogs.push(dogs[i]);
@@ -152,5 +157,6 @@ homeward.renderNeighborhoodDogs = function(dogs, neighborhood){
     var compiledHTML = dogTemplate({dogs: neighborhooddogs});
     $doglist.append(compiledHTML);
     console.log("dogs", neighborhooddogs);
+
 
 };

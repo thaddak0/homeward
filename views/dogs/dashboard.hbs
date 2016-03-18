@@ -1,3 +1,4 @@
+
 <!-- button to add a new dog that pull up the modal for new pup -->
 {{#if user }}
 <button class="btn btn-primary addDog" id="addDog" data-toggle="modal" data-target="#new-dog-modal">
@@ -70,10 +71,11 @@
 </div>
 
 <form onsubmit="homeward.findDogName(event, homeward.renderDogs)">
-  <input type="text" name="name" placeholder="Name"></input>
+  <input type="text" name="name" placeholder="Name">
    <br/>
    <input type="submit" value="Search">
 </form>
+
 
 
 <script>
@@ -81,39 +83,52 @@
 </script>
 
 
-<div id="doglist">
+<div id ="doglist">
 </div>
-
 {{/if}}
 
 <!-- script for rendering all dogs -->
 <script id="doglisttemp" type="text/x-handlebars-template">
-<div class="col-sm-10 col-lg-12 col-xl-18 col-center">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-center">
     \{{#each dogs}}
-
-
-        <div class="row">
-
-
+    <div class="row">
         <container class="index">
             <img src=\{{image}}>
             <div class="data" class="index">
                 <a href="/dashboard/\{{_id}}" class="attributes"><h4 class="dog-name" id="dog-name">\{{name}}</h4> </a>
-                <h5><span class = "bold">name:</span> \{{name}}</h5>
-                <h5><span class = "bold">breed:</span> \{{breed}}</h5>
-                <h5><span class = "bold">age:</span> \{{age}}</h5>
-                <h5><span class = "bold">size:</span> \{{size}}</h5>
-                <h5><span class = "bold">location:</span> \{{location}}</h5>
-                <h5><span class = "bold">neighborhoods:</span> \{{neighborhoods}}</h5>
-                <h5><span class = "bold">reward:</span> \{{reward}}</h5>
-                <h5><span class = "bold">contact:</span> \{{contact}}</h5>
                 <h5><span class = "bold">status:</span> \{{status}}</h5>
-                <h5><span class = "bold">description:</span> \{{description}}</h5>
+                <h5><span class = "bold">color:</span> \{{color}}</h5>
+                <h5><span class = "bold">breed:</span> \{{breed}}</h5>
+                <h5><span class = "bold">size:</span> \{{size}}</h5>
+                <h5><span class = "bold">neighborhood:</span> \{{neighborhoods}}</h5>
+                <h5><span class = "bold">status:</span> \{{status}}</h5>
+
             </div>
+
         </container>
     </div>
     \{{/each}}
 </div>
+</script>
+<!-- script for client side rendering of new dog -->
+<script id="dog-template" type="text/x-handlebars-template">
+  <div class="row">
+      <container class="index">
+          <img src=\{{dog.image}}>
+          <div class="data" class="index">
+              <a href="/dashboard/\{{_id}}" class="attributes"><h4 class="dog-name" id="dog-name">\{{dog.name}}</h4> </a>
+              <h5><span class = "bold">name:</span> \{{dog.name}}</h5>
+              <h5><span class = "bold">status:</span> \{{dog.status}}</h5>
+              <h5><span class = "bold">color:</span> \{{dog.color}}</h5>
+              <h5><span class = "bold">breed:</span> \{{dog.breed}}</h5>
+              <h5><span class = "bold">neighborhoods:</span> \{{dog.neighborhoods}}</h5>
+              <h5><span class = "bold">location:</span> \{{dog.location}}</h5>
+
+
+          </div>
+      </container>
+  </div>
+
 </script>
 
 
@@ -129,9 +144,12 @@
         {{!-- <div class="container-fluid"> --}}
 
 
+
 <section class="container dogModal">
 
+
 <div class="col-md-6 resizeIt col-md-offset-1 resizeItToo">
+
 
   <form id="new-dog-form" class="form form-horizontal text-center move" onsubmit="homeward.createDog(event)">
 
@@ -146,9 +164,11 @@
                 <option>sighted</option>
               </select>
            </div>
-           </div
 
-            <!-- Text input-->
+      </div>
+
+
+            <!-- Text input -->
             <div class="form-group">
               <label class="col-md-6 resizeIt control-label" for="name"></label>
               <div class="col-md-6 resizeIt">
@@ -200,9 +220,11 @@
 
               <!-- Textarea -->
             <div class="form-group">
+
               <label class="col-md-6 resizeIt control-label" for="location"></label>
               <div class="col-md-6 resizeIt">
                 <input class="form-control" id="dogLocation" name="location" placeholder="street location" value="{{dog.location}}"></input>
+
               </div>
             </div>
 
@@ -210,7 +232,7 @@
               {{!-- drop down menu for NEIGHBORHOOD --}}
 
            <div class="form-group">
-              <label class="col-md-6 resizeIt control-label" for="size"></label>
+              <label class="col-md-6 resizeIt control-label" for="neighborhoods"></label>
               <div class="col-md-6 resizeIt">
               <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}">
                   <option disabled selected>Neighborhood</option>
@@ -249,14 +271,7 @@
           </div>
 
 
-              <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-6 resizeIt control-label" for="image"></label>
-              <div class="col-md-6 resizeIt">
-              <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
 
-              </div>
-            </div>
 
             <!-- Text input-->
             <div class="form-group">
@@ -283,9 +298,11 @@
                 <textarea class="form-control" id="dogDescript" name="description" placeholder="description" value="{{dog.description}}"></textarea>
               </div>
             </div>
+            <div class="btn col-md-12">
+              <input type="hidden" role="uploadcare-uploader" name="image" class="upload"/>
+            </div>
 
-
-          <input type="hidden" name="userid" value={{user._id}}>
+          <input type="hidden" name="userid" value="{{user._id}}">
 
           <input type="submit"  class="btn btn-primary col-md-12" value="Add Dog">
 

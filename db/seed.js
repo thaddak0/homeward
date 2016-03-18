@@ -171,7 +171,9 @@ image: "http://cdn.onegreenplanet.org/wp-content/uploads/2010/10//2013/10/Pit-Bu
     isActive: { type: Boolean, default: true }
   },
   {
+
     name: "diamond",
+
     breed: "Dane",
     color: "Grey/Black",
     age: 4,
@@ -188,7 +190,9 @@ image: "http://cdn.onegreenplanet.org/wp-content/uploads/2010/10//2013/10/Pit-Bu
     isActive: { type: Boolean, default: true }
   },
   {
+
     name: "bella",
+
     breed: "Chihuahua",
     color: "tan",
     age: 4,
@@ -222,7 +226,9 @@ image: "http://cdn.onegreenplanet.org/wp-content/uploads/2010/10//2013/10/Pit-Bu
     isActive: { type: Boolean, default: true }
   },
   {
+
     name: "bailey",
+
     breed: "Labrador Retriever",
     color: "tan",
     age: 2,
@@ -239,7 +245,9 @@ image: "http://cdn.onegreenplanet.org/wp-content/uploads/2010/10//2013/10/Pit-Bu
     isActive: { type: Boolean, default: true }
   },
   {
+
     name: "max",
+
     breed: "Beagle",
     color: "Brown/Black/White",
     age: 1,
