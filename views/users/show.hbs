@@ -6,7 +6,7 @@
     <div class="col-sm-6 col-md-9 col-centered" id="dashboard-template">
 
 
-                <h5><span class = "attributes">First Name:</span> {{user.firstName}}</h4>
+                <h5><span class = "attributes">First Name:</span> {{user.firstName}}</h5>
                 <h5><span class = "attributes">Last Name:</span> {{user.lastName}}</h5>
                 <h5><span class = "attributes">Email:</span> {{user.email}}</h5>
 
@@ -17,7 +17,7 @@
                 <div class="userShow-dog-image" id={{_id}}>
                     <img src={{image}}>
 
-                    <h5><span class = "attributes">Name:</span> {{name}}</h4>
+                    <h5><span class = "attributes">Name:</span> {{name}}</h5>
                     <h5><span class = "attributes">Description:</span> {{description}}</h5>
                     <h5><span class = "attributes">Location:</span> {{location}}</h5>
                     <button class="btn btn-primary" id="addDog" data-toggle="modal" data-target="#edit-dog-modal{{_id}}">
@@ -90,7 +90,7 @@
                 <div class="form-group">
                   <label class="col-md-6 control-label" for="age"></label>
                   <div class="col-md-6">
-                    <input class="form-control" id="dogAge" name="age" placeholder="age" value="{{age}}"></input>
+                    <input class="form-control" id="dogAge" name="age" placeholder="age" value="{{age}}">
                   </div>
                 </div>
 
@@ -112,8 +112,7 @@
               <div class="form-group">
                 <label class="col-md-6 control-label" for="location"></label>
                 <div class="col-md-6">
-                  <input class="form-control" id="dogLocation" name="location" placeholder="location" value="{{location}}"></input>
-                </div>
+                  <input class="form-control" id="dogLocation" name="location" placeholder="location" value="{{location}}">
               </div>
 
                 <div class="form-group">
