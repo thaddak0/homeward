@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m0nq/homeward.git"
+    "url": "git+https://github.com/thaddak0/homeward.git"
   },
-  "author": "Jasmine, Annabelle, Ryder, Monk",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/m0nq/homeward/issues"
+    "url": "https://github.com/thaddak0/homeward/issues"
   },
-  "homepage": "https://github.com/m0nq/homeward#readme",
+  "homepage": "https://github.com/thaddak0/homeward#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.1",
