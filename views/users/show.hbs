@@ -1,6 +1,6 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-center">
-        <div>
+        <div class="row">
         <div class="user-caption">
           <h5>User Info</h5>
             <h5><span class = "attributes">First Name:</span> {{user.firstName}}</h5>
@@ -12,7 +12,7 @@
 </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-center">
             {{#each dog}}
-                <div class="userShow-dog-image" id={{_id}}>
+                <div id={{_id}}>
                     <a href="/dashboard/{{_id}}"><img src={{image}}></a>
                     <h4 class="dog-name" id="dog-name">{{dog.name}}</h4>
                     <h5><span class = "attributes">breed:</span> {{dog.breed}}</h5>
