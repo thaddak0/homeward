@@ -30,6 +30,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
+
 var port = process.env.PORT || 3000;
 
 // ROUTES / CONTROLLERS
@@ -39,7 +40,7 @@ require("./config/passport")(passport);
 app.use(routes);
 
 app.get('/', function(req, res){
-  res.render('layout', {user: req.user});
+  res.render('home', {user: req.user});
 });
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email'} ));
@@ -59,4 +60,5 @@ app.get("/logout", function(req, res){
 // LISTEN
 app.listen(port, function () {
   console.log("listening on the quiet storm... *port:", port);
+
 });

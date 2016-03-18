@@ -1,13 +1,35 @@
-<nav class="navbar navbar-default"> {{!-- "navbar-fixed-top" --}}
+<nav class="navbar col-md-12"> {{!-- "navbar-fixed-top" --}}
     <div class="container-fluid">
-      <div class="navbar-header">
-          <h1>homeward</h1> {{#if user }}
-          <pre>
-          <li>{{user.fb.firstName}}</li>
-          </pre>
-          <li><a href="/logout">Logout</a></li>
-          {{else}}
-          <a href="/auth/facebook">Login with Facebook</a> {{/if}}
-      </div>
+
+        {{#if user }}
+        <h1 id="hero"><a class="homeButton"href="/dashboard">homeward</a></h1>
+        <div class="navbar-info">
+            <div class="user-name">
+
+                <a href="/users/{{user._id}}">{{user.fb.firstName}}</a>
+
+            </div>
+            <p class="logout">
+                <a href="/logout">
+                    <button class="btn btn-info" class="logout">
+                        logout
+                    </button>
+                </a>
+            </p>
+            {{else}}
+            <h1 class="heron">homeward</h1>
+            <p class="logout">
+                <a href="/auth/facebook">
+                    <button class="btn btn-info" class="logout">
+                        login
+                    </button>
+                </a>
+            </p>
+        </div>
+        {{/if}}
+
+
+
+
     </div>
 </nav>

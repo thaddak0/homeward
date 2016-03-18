@@ -1,3 +1,317 @@
-*{
-    
+.move {
+    float: left;
+}
+
+.form-horizontal .form-group {
+    margin-right: 49%;
+    margin-left: -75%;
+}
+
+.form-control {
+    width: 260%;
+}
+
+.selections {
+    float: right;
+}
+
+.hover {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+}
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1.23em;
+    border-radius: 0 !important;
+}
+
+.hover {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+}
+
+.navbar {
+    background: url("/images/puppy.png") no-repeat right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    padding-left: 0em;
+    color: #FFF9EA;
+}
+
+.user-name {
+    font-family: 'Quicksand', sans-serif;
+    color: #FFF9EA;
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 1.23em;
+    text-align: left;
+    padding-left: 1em;
+    padding-top: 1em;
+    margin-top: -1.1em;
+    margin-bottom: -2.3em;
+}
+
+#hero {
+    color: #FFF9EA;
+    outline: 2px;
+    outline-color: #aAaAFf;
+    font-weight: 300;
+    font-size: 7em;
+    padding: .1em;
+    border: none;
+}
+
+#hero:hover {
+    backface-visibility: visible;
+    pointer-events: visibleStroke;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    text-shadow: 0 0 .07em #FFF9EA;
+    text-decoration-line: none;
+    border: none;
+    color: #FFF9EA;
+}
+
+.homeButton {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    color: #FFF9EA;
+    text-decoration: inherit;
+    cursor: default;
+}
+
+.navbar-info {
+    color: #FFF9EA;
+    text-align: right;
+    width: 100%;
+    padding-right: 0em;
+    padding-top: 0em;
+    align-items: baseline;
+}
+
+.logout {
+    text-align: right;
+    margin: 0em;
+    margin-right: 3%;
+    margin-top: -.3em;
+    margin-bottom: .4em;
+    padding: 1em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    float: right;
+}
+
+.heron {
+    color: #FFF9EA;
+    outline-width: 2px;
+    outline-color: #aAaAFf;
+    font-weight: 300;
+    font-size: 7em;
+    padding: .1em;
+}
+
+.dog-name {
+    font-weight: 500;
+    font-size: .4em;
+    padding-left: 0em;
+    margin-left: 0em;
+    margin-bottom: -.1em;
+}
+
+.col-centered {
+    float: left;
+    margin: 0 auto;
+}
+
+.caption {
+    max-width: 6em;
+    font-size: 2.4em;
+    font-weight: 400;
+    width: 7em;
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    margin-left: 55%;
+    margin-right: 5%;
+    float: left;
+}
+
+.data {
+    max-width: 6em;
+    max-height: 4.5em;
+    font-weight: 400;
+    font-size: 2.1em;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: -.222em;
+    margin-bottom: .1%;
+    text-align: left;
+    display: inline-block;
+}
+
+img {
+    width: 35%;
+    height: 4.5em;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    position: absolute: float: left;
+    top: center;
+    border: 2px solid #aAaAcf;
+    margin: .2%;
+    object-fit: cover;
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 1.15em;
+}
+
+.index {
+    height: 300px;
+}
+
+.row {
+    height: 8em;
+    width: 96%;
+    border: 2px solid #aAaAcf;
+    overflow-y: hidden;
+    padding: .5em;
+    margin: .7em;
+    position: relative;
+}
+
+#row {
+    height: 15.7em;
+    width: 95%;
+    max-width: 110%;
+    border: 2px solid #aAaAcf;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding: .01em;
+    margin-top: .6em;
+    margin-bottom: .4em;
+    position: relative;
+}
+
+.dog-thumb {
+    margin: .3em;
+    margin-left: -.01em;
+}
+
+.showImage {
+    width: 50%;
+    height: 7.777em;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    position: absolute;
+    border: 2px solid #aAaAcf;
+    object-fit: cover;
+    object-position: center;
+}
+
+.radio {
+    font-size: 15px;
+}
+
+.addDog {
+    margin-left: 2.3em;
+    padding: 1em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.btn-info {
+    font-size: 18px;
+    background-color: rgba(255, 254, 253, .24);
+    color: #FFF9EA;
+    border-color: #FFF9EA;
+    border-width: 2px;
+}
+
+.btn-primary {
+    font-size: auto;
+    background-color: rgba(218, 222, 254, .24);
+    color: #aAaAcf;
+    border-color: #aAaAcf;
+    border-width: 2px;
+    margin-top: 2%;
+    margin-left: 3.333%;
+}
+
+h5 {
+    font-size: .19em;
+    font-weight: 400;
+}
+
+.splashDisplay {
+    margin-top: 7px;
+    margin-left: 20%;
+    margin-bottom: .6em;
+    text-align: left;
+    font-size: 3em;
+    font-weight: 400;
+    float: left;
+}
+
+.splashBody {
+    padding-top: .3em;
+    margin-top: -.5em;
+    margin-left: 22%;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 400;
+    max-width: 50%;
+    float: left;
+}
+
+.splashCaption {
+    margin-left: 22%;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 300;
+    max-width: 50%;
+    float: left;
+}
+
+a {
+    color: inherit;
+    text-decoration-line: none;
+}
+
+a:hover {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    text-shadow: 0 0 .09em #FFF9EA !important;
+}
+
+
+/*Edit*/
+
+#updating {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+/*Media Query to Prevent Break in form*/
+@media (min-width: 300px){
+.col-md-offset-1,
+.resizeItToo {
+    margin-left: 8.33333333%;
+}
+@media (min-width: 300px){
+.col-md-6,
+.resizeIt {
+    width: 50%;
+    float: left;
 }

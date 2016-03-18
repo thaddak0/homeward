@@ -3,20 +3,24 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var dogSchema = new Schema({
-  name: String,
-  breed: String,
-  color: String,
+  name: { type: String, default: "unknown" },
+  breed: { type: String, default: "unknown" },
+  color: { type: String},
   age: { type: Number, max: 50 },
   size: { type: String, enum: ["small", "medium", "large"] },
   location: String,
-  image: String,
+  neighborhoods: { type: String, enum: neighborhoods },
+  image: { type: String, default: "" },
   reward: String,
-  phoneNumber: String,
-  description: String,
-  lost: Boolean,
+  contact: { type: String},
+  description: { type: String},
+  status: { type: String, enum: ["lost", "found", "sighted"] },
+  userId: String,
   createdOn: { type: Date, default: Date.now },
   isActive: { type: Boolean, default: true }
 });
+
+var neighborhoods = ["Bernal Heights", "The Castro", "Chinatown", "Cole Valley", "Deco Ghetto", "Fisherman's Wharf", "Golden Gate Park", "The Haight", "Hayes Valley", "Inner Richmond", "Inner Sunset", "The Marina", "The Mission", "Mission to Potrero", "Dolores and Valencia Corridor", "24th Street", "Nob Hill", "Noe Valley", "North Beach", "Outer Richmond", "Outer Sunset", "Pacific Heights", "Potrero Hill", "Russian Hill", "SoMa", "Tenderloin", "Union Square", "Western Addition"];
 
 var Dog = mongoose.model("Dog", dogSchema);
 
