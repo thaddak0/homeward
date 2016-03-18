@@ -23,7 +23,7 @@
 </button>
 
 <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-primary addDog" id="dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Size <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -34,7 +34,7 @@
 </div>
 
 <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-primary addDog" id="dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Neighborhoods <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -70,9 +70,8 @@
   </ul>
 </div>
 
-<form onsubmit="homeward.findDogName(event, homeward.renderDogs)">
-  <input type="text" name="name" placeholder="Name">
-   <br/>
+<form onsubmit="homeward.findDogName(event, homeward.renderDogs)" class="searchBar">
+  <input type="text" name="name" placeholder="search by name" >
    <input type="submit" value="Search">
 </form>
 
@@ -102,6 +101,7 @@
                 <h5><span class = "bold">size:</span> \{{size}}</h5>
                 <h5><span class = "bold">neighborhood:</span> \{{neighborhoods}}</h5>
                 <h5><span class = "bold">status:</span> \{{status}}</h5>
+
 
             </div>
 

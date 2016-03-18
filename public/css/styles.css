@@ -281,6 +281,19 @@ h5 {
     float: left;
 }
 
+.user-caption {
+    max-width: 6em;
+    font-size: 6em;
+    font-weight: 400;
+    width: 7em;
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+}
+
 a {
     color: inherit;
     text-decoration-line: none;
@@ -301,6 +314,30 @@ a:hover {
     padding-right: 20px;
 }
 
+
+#dropDown{
+    margin-top: .9em;
+    margin-left: 3.333em;
+}
+.searchBar{
+    color: #aAaAcf;
+    border-color: #aAaAcf;
+    border-width: 2px;
+    margin-top:1em;
+    margin-left: 3.333%;
+
+
+
+}
+
+/*.dogModal {
+    width: 468px;
+}
+
+
+.modal-content {
+    position: relative;
+}*/
 
 
 /*Media Query to Prevent Break in form*/
