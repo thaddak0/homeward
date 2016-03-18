@@ -100,12 +100,12 @@
                 <h5><span class = "bold">status:</span> \{{status}}</h5>
                 <h5><span class = "bold">color:</span> \{{color}}</h5>
                 <h5><span class = "bold">breed:</span> \{{breed}}</h5>
-                <h5><span class = "bold">neighborhoods:</span> \{{neighborhoods}}</h5>
-                <h5><span class = "bold">location:</span> \{{location}}</h5>
-            
-                
+                <h5><span class = "bold">size:</span> \{{size}}</h5>
+                <h5><span class = "bold">neighborhood:</span> \{{neighborhoods}}</h5>
+                <h5><span class = "bold">status:</span> \{{status}}</h5>
+
             </div>
-          
+
         </container>
     </div>
     \{{/each}}
@@ -124,8 +124,8 @@
               <h5><span class = "bold">breed:</span> \{{dog.breed}}</h5>
               <h5><span class = "bold">neighborhoods:</span> \{{dog.neighborhoods}}</h5>
               <h5><span class = "bold">location:</span> \{{dog.location}}</h5>
-           
-          
+
+
           </div>
       </container>
   </div>
@@ -168,7 +168,7 @@
       </div>
 
 
-            <!-- Text input-->
+            <!-- Text input -->
             <div class="form-group">
               <label class="col-md-6 control-label" for="name"></label>
               <div class="col-md-6">
@@ -270,13 +270,13 @@
 
 
               <!-- Text input-->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label class="col-md-6 control-label" for="image"></label>
               <div class="col-md-6">
               <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
 
               </div>
-            </div>
+            </div> -->
 
             <!-- Text input-->
             <div class="form-group">
@@ -303,7 +303,9 @@
                 <textarea class="form-control" id="dogDescript" name="description" placeholder="description" value="{{dog.description}}"></textarea>
               </div>
             </div>
-
+            <div class="btn col-md-12">
+              <input type="hidden" role="uploadcare-uploader" name="image" class="upload"/>
+            </div>
 
           <input type="hidden" name="userid" value="{{user._id}}">
 
