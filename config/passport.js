@@ -17,7 +17,8 @@ module.exports = function(passport){
     // clientID        : OAUTH.fb.clientID,
     clientID        : OAUTH.fb.clientID,
     clientSecret    : OAUTH.fb.clientSecret,
-    callbackURL     : 'http://localhost:3000/auth/facebook/callback',
+    // callbackURL     : 'http://localhost:3000/auth/facebook/callback',
+    callbackURL     : 'https://radiant-ridge-62680.herokuapp.com/auth/facebook/callback',
     enableProof     : true,
     profileFields   : ['name', 'emails']
   }, function(access_token, refresh_token, profile, done) {
