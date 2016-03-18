@@ -63,7 +63,7 @@ homeward.findDogName = function(e, callback){
   }).fail(function (err) {
     console.log("Error: ", err);
   });
-}
+};
 
 homeward.renderLostDogs = function(dogs){
   console.log(dogs);

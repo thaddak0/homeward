@@ -31,7 +31,7 @@ var dogsController = {
        } else {
          res.status(201).send(JSON.stringify(dogs.reverse()));
        }
-     })
+     });
    },
 
   createDog: function (req, res) {
