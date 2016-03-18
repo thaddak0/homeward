@@ -40,6 +40,7 @@ var dogsController = {
 
   createDog: function (req, res) {
     var name = req.body.name;
+    name = name.toLowerCase();
     var breed = req.body.breed;
     var color = req.body.color;
     var age = req.body.age;
