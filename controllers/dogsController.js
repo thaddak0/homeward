@@ -138,9 +138,9 @@ var dogsController = {
   deleteDog: function (req, res) {
 
     Dog.remove({_id: req.params.id},function(err) {
-   if (err) { return console.log(err); }
-   console.log(req.params.id  + "was removed");
-   res.status(200).send(); // everything is a-OK
+      if (err) { return console.log(err); }
+      console.log(req.params.id  + "was removed");
+      res.status(200).send(); // everything is a-OK
     });
 
   }

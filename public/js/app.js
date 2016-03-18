@@ -32,6 +32,18 @@ console.log('linked');
       });
   };
 
+homeward.deleteDog = function(e){
+  e.preventDefault();
+  var dogId = $(e.target).closest('div').attr('id');
+  $.ajax({
+    method: 'DELETE',
+    url: '/dashboard/'+ dogId,
+    data: {id: dogId},
+    success: function() {
+      $('#'+dogId).remove();
+    }
+  })
+}
 
 homeward.renderDog = function(dog){
   var $doglist = $('#doglist');
