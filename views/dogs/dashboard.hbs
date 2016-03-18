@@ -148,14 +148,15 @@
 <section class="container dogModal">
 
 
-<div class="col-md-6 col-md-offset-1">
+<div class="col-md-6 resizeIt col-md-offset-1 resizeItToo">
+
 
   <form id="new-dog-form" class="form form-horizontal text-center move" onsubmit="homeward.createDog(event)">
 
 
           <div class="form-group">
-              <label class="col-md-6 control-label" for="size"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="size"></label>
+              <div class="col-md-6 resizeIt">
               <select class="form-control" id="status" name="status" value="{{dog.status}}">
                 <option disabled selected>Lost, Found or Sighted</option>
                 <option>lost</option>
@@ -169,8 +170,8 @@
 
             <!-- Text input -->
             <div class="form-group">
-              <label class="col-md-6 control-label" for="name"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="name"></label>
+              <div class="col-md-6 resizeIt">
               <input id="dogName" name="name" type="text" placeholder="name" value="{{dog.name}}" class="form-control input-md" required="">
 
               </div>
@@ -178,8 +179,8 @@
 
             <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-6 control-label" for="breed"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="breed"></label>
+              <div class="col-md-6 resizeIt">
               <input id="dogBreed" name="breed" type="text" placeholder="breed" value="{{dog.breed}}" class="form-control input-md">
 
               </div>
@@ -187,8 +188,8 @@
 
             <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-6 control-label" for="color"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="color"></label>
+              <div class="col-md-6 resizeIt">
               <input id="dogColor" name="color" type="text" placeholder="color" value="{{dog.color}}" class="form-control input-md">
 
               </div>
@@ -197,17 +198,17 @@
 
                  <!-- Textarea -->
             <div class="form-group">
-              <label class="col-md-6 control-label" for="age"></label>
-              <div class="col-md-6">
-                <input class="form-control" id="dogAge" name="age" placeholder="age" value="{{dog.age}}">
+              <label class="col-md-6 resizeIt control-label" for="age"></label>
+              <div class="col-md-6 resizeIt">
+                <input class="form-control" id="dogAge" name="age" placeholder="age" value="{{dog.age}}"></input>
               </div>
             </div>
 
             {{!-- drop down menu for SIZE --}}
 
            <div class="form-group">
-              <label class="col-md-6 control-label" for="size"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="size"></label>
+              <div class="col-md-6 resizeIt">
               <select class="form-control" id="size" name="size" value="{{dog.size}}">
                 <option disabled selected>Size</option>
                 <option>small</option>
@@ -219,9 +220,11 @@
 
               <!-- Textarea -->
             <div class="form-group">
-              <label class="col-md-6 control-label" for="location"></label>
-              <div class="col-md-6">
-                <input class="form-control" id="dogLocation" name="location" placeholder="street location" value="{{dog.location}}">
+
+              <label class="col-md-6 resizeIt control-label" for="location"></label>
+              <div class="col-md-6 resizeIt">
+                <input class="form-control" id="dogLocation" name="location" placeholder="street location" value="{{dog.location}}"></input>
+
               </div>
             </div>
 
@@ -229,8 +232,8 @@
               {{!-- drop down menu for NEIGHBORHOOD --}}
 
            <div class="form-group">
-              <label class="col-md-6 control-label" for="size"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="neighborhoods"></label>
+              <div class="col-md-6 resizeIt">
               <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}">
                   <option disabled selected>Neighborhood</option>
                   <option>Bernal Heights</option>
@@ -268,19 +271,12 @@
           </div>
 
 
-              <!-- Text input-->
-            <!-- <div class="form-group">
-              <label class="col-md-6 control-label" for`="image"></label>
-              <div class="col-md-6">
-              <input id="dogImage" name="image" type="text" placeholder="image URL" value="{{dog.image}}" class="form-control input-md">
 
-              </div>
-            </div> -->
 
             <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-6 control-label" for="reward"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="reward"></label>
+              <div class="col-md-6 resizeIt">
               <input id="dogReward" name="reward" type="text" placeholder="reward" value="{{dog.reward}}" class="form-control input-md">
 
               </div>
@@ -288,8 +284,8 @@
 
               <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-6 control-label" for="contact"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="contact"></label>
+              <div class="col-md-6 resizeIt">
               <input id="dogContact" name="contact" type="text" placeholder="contact" value="{{dog.contact}}" class="form-control input-md">
 
               </div>
@@ -297,8 +293,8 @@
 
             <!-- Textarea -->
             <div class="form-group">
-              <label class="col-md-6 control-label" for="description"></label>
-              <div class="col-md-6">
+              <label class="col-md-6 resizeIt control-label" for="description"></label>
+              <div class="col-md-6 resizeIt">
                 <textarea class="form-control" id="dogDescript" name="description" placeholder="description" value="{{dog.description}}"></textarea>
               </div>
             </div>

@@ -302,14 +302,16 @@ a:hover {
 }
 
 
-/*.dogModal {
-    width: 468px;
+
+/*Media Query to Prevent Break in form*/
+@media (min-width: 300px){
+.col-md-offset-1,
+.resizeItToo {
+    margin-left: 8.33333333%;
 }
-
-
-.modal-content {
-    position: relative;
-}*/
-
-
-/*breaks @ 995*/
+@media (min-width: 300px){
+.col-md-6,
+.resizeIt {
+    width: 50%;
+    float: left;
+}
