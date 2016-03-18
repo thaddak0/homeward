@@ -17,8 +17,10 @@ router.route('/users/:id')
   .get(usersController.show);
 router.route('/dogs')
   .get(dogsController.getAllDogs);
+
 router.route('/dogs/names')
   .post(dogsController.getDogName);
+
 
 
 module.exports = router;
