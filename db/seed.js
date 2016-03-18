@@ -17,7 +17,9 @@ User.remove({}, function (err) {
 
 var dogs = [
   {
+
     name: "diamond",
+
     breed: "Dane",
     color: "Grey/Black",
     age: 4,
@@ -34,7 +36,9 @@ var dogs = [
     isActive: { type: Boolean, default: true }
   },
   {
+
     name: "bella",
+
     breed: "Chihuahua",
     color: "tan",
     age: 4,
@@ -68,7 +72,9 @@ var dogs = [
     isActive: { type: Boolean, default: true }
   },
   {
+
     name: "bailey",
+
     breed: "Labrador Retriever",
     color: "tan",
     age: 2,
@@ -85,7 +91,9 @@ var dogs = [
     isActive: { type: Boolean, default: true }
   },
   {
+
     name: "max",
+
     breed: "Beagle",
     color: "Brown/Black/White",
     age: 1,
