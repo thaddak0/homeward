@@ -1,6 +1,6 @@
 const OAUTH = {
   fb: {
-    clientID: process.env.FB_CLIENT,
+    clientID: process.env.FB_CLIENT
     clientSecret: process.env.FB_SECRET
   },
 };
