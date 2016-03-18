@@ -14,6 +14,7 @@ module.exports = function(passport){
   });
 
   passport.use('facebook', new FacebookStrategy({
+    // clientID        : OAUTH.fb.clientID,
     clientID        : OAUTH.fb.clientID,
     clientSecret    : OAUTH.fb.clientSecret,
     callbackURL     : 'http://localhost:3000/auth/facebook/callback',
