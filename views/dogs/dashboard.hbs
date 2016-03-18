@@ -157,7 +157,7 @@
           <div class="form-group">
               <label class="col-md-6 resizeIt control-label" for="size"></label>
               <div class="col-md-6 resizeIt">
-              <select class="form-control" id="status" name="status" value="{{dog.status}}">
+              <select class="form-control" id="status" name="status" value="{{dog.status}}" required="">
                 <option disabled selected>Lost, Found or Sighted</option>
                 <option>lost</option>
                 <option>found</option>
@@ -172,7 +172,7 @@
             <div class="form-group">
               <label class="col-md-6 resizeIt control-label" for="name"></label>
               <div class="col-md-6 resizeIt">
-              <input id="dogName" name="name" type="text" placeholder="name" value="{{dog.name}}" class="form-control input-md" required="">
+              <input id="dogName" name="name" type="text" placeholder="name" value="{{dog.name}}" class="form-control input-md">
 
               </div>
             </div>
@@ -209,7 +209,7 @@
            <div class="form-group">
               <label class="col-md-6 resizeIt control-label" for="size"></label>
               <div class="col-md-6 resizeIt">
-              <select class="form-control" id="size" name="size" value="{{dog.size}}">
+              <select class="form-control" id="size" name="size" value="{{dog.size}}" required="">
                 <option disabled selected>Size</option>
                 <option>small</option>
                 <option>medium</option>
@@ -234,7 +234,7 @@
            <div class="form-group">
               <label class="col-md-6 resizeIt control-label" for="neighborhoods"></label>
               <div class="col-md-6 resizeIt">
-              <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}">
+              <select class="form-control" id="neighborhoods" name="neighborhoods" value="{{dog.neighborhoods}}" required="">
                   <option disabled selected>Neighborhood</option>
                   <option>Bernal Heights</option>
                   <option>The Castro</option>
@@ -286,7 +286,7 @@
             <div class="form-group">
               <label class="col-md-6 resizeIt control-label" for="contact"></label>
               <div class="col-md-6 resizeIt">
-              <input id="dogContact" name="contact" type="text" placeholder="contact" value="{{dog.contact}}" class="form-control input-md">
+              <input id="dogContact" name="contact" type="text" placeholder="contact" value="{{dog.contact}}" class="form-control input-md" required="">
 
               </div>
             </div>
