@@ -114,7 +114,7 @@ homeward.renderSightedDogs = function(dogs){
   console.log("this");
     for (var i = 0; i < dogs.length; i++) {
       if (dogs[i].status == "sighted") {
-        founddogs.push(dogs[i]);
+        sighteddogs.push(dogs[i]);
       };
     };
     var dogTemplate = Handlebars.compile($('#doglisttemp').html());
