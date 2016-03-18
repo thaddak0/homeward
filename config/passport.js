@@ -1,6 +1,6 @@
 var User = require('../models/user');
 var FacebookStrategy = require('passport-facebook').Strategy;
-var OAUTH = require('../secrets');
+// var OAUTH = require('../secrets');
 
 module.exports = function(passport){
   passport.serializeUser(function(user, done) {
@@ -15,8 +15,9 @@ module.exports = function(passport){
 
   passport.use('facebook', new FacebookStrategy({
     // clientID        : OAUTH.fb.clientID,
-    clientID        : OAUTH.fb.clientID,
-    clientSecret    : OAUTH.fb.clientSecret,
+    clientID        : process.env.FB_CLIENT,
+    clientSecret    : process.env.FB_SECRET,
+    // clientSecret    : OAUTH.fb.clientSecret,
     // callbackURL     : 'http://localhost:3000/auth/facebook/callback',
     callbackURL     : 'https://radiant-ridge-62680.herokuapp.com/auth/facebook/callback',
     enableProof     : true,
