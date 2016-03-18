@@ -7,10 +7,21 @@ var dogsController = {
       if (err) {
         console.log("Error: ", err);
       } else {
-        res.render('dogs/dashboard', {dogs: dogs.reverse(), user: req.user});
+        res.render('dogs/dashboard', {dogs: JSON.stringify(dogs), user: req.user});
       }
     });
   },
+
+  getAllDogs: function (req, res) {
+    Dog.find({}, function (err, dogs) {
+      if (err) {
+        console.log("Error: ", err);
+      } else {
+        res.status(201).send(JSON.stringify(dogs.reverse()));
+      }
+    });
+  },
+
 
   createDog: function (req, res) {
     var name = req.body.name;
@@ -70,18 +81,25 @@ var dogsController = {
       if (err){
         console.log("There was an error : " + err);
       } else {
+        // console.log(dog.userId);
+        // take the dogs userId,
         User.findById(dog.userId, function (err, user) {
           err ? console.error("Error: " + err) : poster = user;
+          // console.log(poster);
           res.render('dogs/show', { dog: dog, user: req.user, poster: poster });
         });
       }
     });
   },
 
-  update: function(req, res){
-
-    console.log('updating id ', req.params.id);
-    console.log('received body ', req.body);
+  update: function(req, res) {
+    // var dogId = req.params.id
+    // if (dog.userId === req.user.id) {
+      // then Dog.update(dog.id);
+    // }
+    // redirect("back");
+    console.log('updating id ', this);
+    // console.log('received body ', req.body);
 
     Dog.update({_id: req.params.id}, {
       name: req.body.name,
@@ -99,6 +117,13 @@ var dogsController = {
       console.log(err);
     });
     res.redirect('back');
+  },
+
+  deleteDog: function (req, res) {
+    // var dog = req.<the passed in dog to be deleted>
+    // if dog.userId === req.user.id
+      // then Dog.remove(dog.id);
+    // redirect("back");
   }
 };
 
