@@ -42,6 +42,7 @@
     font-weight: 300;
     padding-left: 0em;
     color: #FFF9EA;
+    max-width: 100vw;
 }
 
 .user-name {
